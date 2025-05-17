@@ -13,3 +13,12 @@ config_version=5
 config/name="TCG Game Jam"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "gray",
+"res://Common/": "blue",
+"res://Entities/": "red",
+"res://Environment/": "green"
+}

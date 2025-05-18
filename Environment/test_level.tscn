@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://da4nccnci7wmy"]
+
+[ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_bst0x"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yijdk"]
+sky_top_color = Color(0.419318, 0.460197, 0.85151, 1)
+sky_horizon_color = Color(0.698733, 0.701203, 0.790032, 1)
+ground_horizon_color = Color(0.698733, 0.701203, 0.790032, 1)
+
+[sub_resource type="Sky" id="Sky_bst0x"]
+sky_material = SubResource("ProceduralSkyMaterial_yijdk")
+
+[sub_resource type="Environment" id="Environment_17f7b"]
+background_mode = 2
+sky = SubResource("Sky_bst0x")
+tonemap_mode = 2
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yijdk"]
+albedo_color = Color(0.317647, 1, 0.309804, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bst0x"]
+albedo_color = Color(0, 0, 1, 1)
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 4.0233, 0)
+light_energy = 0.75
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("Environment_17f7b")
+
+[node name="Geometry" type="Node3D" parent="."]
+
+[node name="Floor" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+use_collision = true
+size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_yijdk")
+
+[node name="Staircase" type="Node3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="Staircase1" type="CSGBox3D" parent="Geometry/Staircase"]
+use_collision = true
+material = SubResource("StandardMaterial3D_bst0x")
+
+[node name="Staircase2" type="CSGBox3D" parent="Geometry/Staircase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.5, 0)
+use_collision = true
+material = SubResource("StandardMaterial3D_bst0x")
+
+[node name="Staircase3" type="CSGBox3D" parent="Geometry/Staircase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -1)
+use_collision = true
+material = SubResource("StandardMaterial3D_bst0x")
+
+[node name="Staircase4" type="CSGBox3D" parent="Geometry/Staircase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+use_collision = true
+material = SubResource("StandardMaterial3D_bst0x")
+
+[node name="Staircase5" type="CSGBox3D" parent="Geometry/Staircase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -1)
+use_collision = true
+material = SubResource("StandardMaterial3D_bst0x")
+
+[node name="Staircase6" type="CSGBox3D" parent="Geometry/Staircase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 0)
+use_collision = true
+material = SubResource("StandardMaterial3D_bst0x")
+
+[node name="Player" parent="." instance=ExtResource("1_bst0x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08847, 0)

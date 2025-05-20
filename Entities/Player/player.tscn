@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://de2sy05ot418v"]
+[gd_scene load_steps=9 format=3 uid="uid://de2sy05ot418v"]
 
 [ext_resource type="Script" uid="uid://cbh06rw2r5lge" path="res://Entities/Player/player.gd" id="1_ffboj"]
+[ext_resource type="Script" uid="uid://b5dgfcs3asibd" path="res://Common/State_Machine/state_machine.gd" id="2_3uyv8"]
+[ext_resource type="Script" uid="uid://nn70c4isn8j1" path="res://Entities/Player/States/player_idle.gd" id="3_lu8i8"]
+[ext_resource type="Script" uid="uid://dq2qpcu3uqcm0" path="res://Entities/Player/States/player_walk.gd" id="4_tekja"]
+[ext_resource type="Script" uid="uid://8jbv6xtse65a" path="res://Entities/Player/States/player_jump.gd" id="5_5c2io"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mv1ah"]
 
@@ -8,8 +12,9 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mv1ah"]
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_ffboj")
+jumpForce = 10.0
 
 [node name="Collider" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_mv1ah")
@@ -26,3 +31,26 @@ spring_length = 7.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initialState")]
+script = ExtResource("2_3uyv8")
+initialState = NodePath("Idle")
+metadata/_custom_type_script = "uid://b5dgfcs3asibd"
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("3_lu8i8")
+metadata/_custom_type_script = "uid://nn70c4isn8j1"
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("4_tekja")
+metadata/_custom_type_script = "uid://dq2qpcu3uqcm0"
+
+[node name="Jump" type="Node" parent="StateMachine"]
+script = ExtResource("5_5c2io")
+metadata/_custom_type_script = "uid://8jbv6xtse65a"
+
+[node name="DebugStateLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24121, 0)
+billboard = 1
+text = "Debug Test"
+font_size = 64

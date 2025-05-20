@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://de2sy05ot418v"]
+[gd_scene load_steps=10 format=3 uid="uid://de2sy05ot418v"]
 
 [ext_resource type="Script" uid="uid://cbh06rw2r5lge" path="res://Entities/Player/player.gd" id="1_ffboj"]
 [ext_resource type="Script" uid="uid://b5dgfcs3asibd" path="res://Common/State_Machine/state_machine.gd" id="2_3uyv8"]
 [ext_resource type="Script" uid="uid://nn70c4isn8j1" path="res://Entities/Player/States/player_idle.gd" id="3_lu8i8"]
 [ext_resource type="Script" uid="uid://dq2qpcu3uqcm0" path="res://Entities/Player/States/player_walk.gd" id="4_tekja"]
 [ext_resource type="Script" uid="uid://8jbv6xtse65a" path="res://Entities/Player/States/player_jump.gd" id="5_5c2io"]
+[ext_resource type="Script" uid="uid://e0tghmpdna2a" path="res://Common/health_component.gd" id="6_4wf4l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mv1ah"]
 
@@ -54,3 +55,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24121, 0)
 billboard = 1
 text = "Debug Test"
 font_size = 64
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("6_4wf4l")
+maxHealth = 3.0
+metadata/_custom_type_script = "uid://e0tghmpdna2a"
+
+[node name="Stamina" type="Node" parent="."]
+script = ExtResource("6_4wf4l")
+maxHealth = 10.0
+metadata/_custom_type_script = "uid://e0tghmpdna2a"

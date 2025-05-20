@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://de2sy05ot418v"]
+[gd_scene load_steps=12 format=3 uid="uid://de2sy05ot418v"]
 
 [ext_resource type="Script" uid="uid://cbh06rw2r5lge" path="res://Entities/Player/player.gd" id="1_ffboj"]
+[ext_resource type="Script" uid="uid://dkt6ayks3pwtb" path="res://Common/Hitbox_Hurtbox/hurtbox.gd" id="2_01a4e"]
 [ext_resource type="Script" uid="uid://b5dgfcs3asibd" path="res://Common/State_Machine/state_machine.gd" id="2_3uyv8"]
 [ext_resource type="Script" uid="uid://nn70c4isn8j1" path="res://Entities/Player/States/player_idle.gd" id="3_lu8i8"]
 [ext_resource type="Script" uid="uid://dq2qpcu3uqcm0" path="res://Entities/Player/States/player_walk.gd" id="4_tekja"]
@@ -9,16 +10,24 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mv1ah"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7a1se"]
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mv1ah"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mv1ah"]
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_ffboj")
-jumpForce = 10.0
 
 [node name="Collider" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_mv1ah")
+
+[node name="Hurtbox" type="Area3D" parent="."]
+script = ExtResource("2_01a4e")
+metadata/_custom_type_script = "uid://dkt6ayks3pwtb"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox"]
+shape = SubResource("CapsuleShape3D_7a1se")
 
 [node name="PlayerMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_mv1ah")

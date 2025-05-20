@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://da4nccnci7wmy"]
+[gd_scene load_steps=10 format=3 uid="uid://da4nccnci7wmy"]
 
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_bst0x"]
+[ext_resource type="Script" uid="uid://cvkvog5ij3rpo" path="res://Common/Hitbox_Hurtbox/hitbox.gd" id="2_17f7b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yijdk"]
 sky_top_color = Color(0.419318, 0.460197, 0.85151, 1)
@@ -22,6 +23,11 @@ albedo_color = Color(0.317647, 1, 0.309804, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bst0x"]
 albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8uj1e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_17f7b"]
+albedo_color = Color(1, 0, 0, 1)
 
 [node name="TestLevel" type="Node3D"]
 
@@ -77,3 +83,14 @@ material = SubResource("StandardMaterial3D_bst0x")
 
 [node name="Player" parent="." instance=ExtResource("1_bst0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08847, 0)
+
+[node name="TestHitbox" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.64014, 1.2164, 0)
+script = ExtResource("2_17f7b")
+metadata/_custom_type_script = "uid://cvkvog5ij3rpo"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestHitbox"]
+shape = SubResource("BoxShape3D_8uj1e")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="TestHitbox"]
+material_override = SubResource("StandardMaterial3D_17f7b")

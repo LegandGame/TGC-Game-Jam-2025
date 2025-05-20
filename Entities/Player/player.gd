@@ -12,6 +12,9 @@ var invertMouseDirX := false
 @onready var camera : Camera3D = $CameraPivot/SpringArm3D/Camera3D
 @onready var cameraSpringArm : SpringArm3D = $CameraPivot/SpringArm3D
 @onready var stateMachine : StateMachine = $StateMachine
+@onready var hurtbox : HurtboxComponent = $Hurtbox
+@onready var health : HealthComponent = $Health
+@onready var stamina : HealthComponent = $Stamina
 
 @export_category("Properties")
 @export var speed : float = 5.0
@@ -25,9 +28,14 @@ var canDoubleJump : bool
 var is_sprinting : bool
 
 func _ready() -> void:
+	# change camera fov
 	camera.fov = fov
+	# initialize player states
 	for state in stateMachine.states.values():
 		state.player = self
+	# connect health
+	hurtbox.hurt.connect(health.change_cur_health)
+	health.health_empty.connect(die)
 
 
 func _physics_process(delta: float) -> void:
@@ -43,24 +51,6 @@ func _physics_process(delta: float) -> void:
 	if scroll:
 		cameraSpringArm.spring_length += scroll * delta * 2.0
 		cameraSpringArm.spring_length = clamp(cameraSpringArm.spring_length, 2.0, 10.0)
-	
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-	
-	# JUMPING
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = jumpForce
-	
-	# MOVEMENT
-	#var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
-	#var direction := (cameraPivot.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	#if direction:
-		#velocity.x = direction.x * SPEED
-		#velocity.z = direction.z * SPEED
-	#else:
-		#velocity.x = move_toward(velocity.x, 0, SPEED)
-		#velocity.z = move_toward(velocity.z, 0, SPEED)
 	
 	move_and_slide()
 
@@ -84,3 +74,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			cameraInputDir.y = -event.screen_relative.y * mouseSensitivity
 		if invertMouseDirX:
 			cameraInputDir.x = -event.screen_relative.x * mouseSensitivity
+
+
+func die() -> void:
+	get_tree().quit()

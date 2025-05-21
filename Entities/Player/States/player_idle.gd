@@ -1,7 +1,8 @@
 class_name PlayerIdle extends PlayerState
 
 func enter():
-	pass
+	player.canDoubleJump = true
+	#player.canDoubleJump = true
 
 func exit():
 	pass
@@ -10,15 +11,19 @@ func update(_delta : float):
 	pass
 
 func physics_update(delta : float):
+	# transition to falling
+	if !player.is_on_floor():
+		transition.emit(self, "fall")
+		
 	# transition to movement
-	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
-	var direction := (player.cameraPivot.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	#print(direction)
+	var direction := get_input_direction()
 	if direction:
-		transition.emit(self, "walk")
+		if player.isSprinting:
+			transition.emit(self, "sprint")
+		else:
+			transition.emit(self, "walk")
 	else:
-		player.velocity.x = lerp(player.velocity.x, 0.0, delta * player.groundAccel)
-		player.velocity.z = lerp(player.velocity.z, 0.0, delta * player.groundAccel)
+		lerp_player_velocity(delta, direction, 0.0, player.groundAccel)
 	
 	# transition to jump
 	if Input.is_action_just_pressed("jump"):

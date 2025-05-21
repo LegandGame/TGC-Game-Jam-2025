@@ -17,15 +17,16 @@ var invertMouseDirX := false
 @onready var stamina : HealthComponent = $Stamina
 
 @export_category("Properties")
-@export var speed : float = 5.0
+@export var walkSpeed : float = 5.0
+@export var sprintSpeed : float = 8.0
 @export var jumpForce : float = 4.5
 @export var groundAccel : float = 6.0
 @export var airAccel : float = 2.0
 @export var gravity : float = -9.8
 @export var terminalVelo : float = 30.0
 
-var canDoubleJump : bool
-var is_sprinting : bool
+var isSprinting : bool
+var canDoubleJump : bool = true	# temp. will implement stamina later
 
 func _ready() -> void:
 	# change camera fov
@@ -37,7 +38,6 @@ func _ready() -> void:
 	hurtbox.hurt.connect(health.change_cur_health)
 	health.health_empty.connect(die)
 
-
 func _physics_process(delta: float) -> void:
 	$DebugStateLabel.text = stateMachine.curState.name	#DEBUG
 	
@@ -46,11 +46,16 @@ func _physics_process(delta: float) -> void:
 	cameraPivot.rotation.x = clamp(cameraPivot.rotation.x, deg_to_rad(-80), deg_to_rad(30))
 	cameraPivot.rotation.y -= cameraInputDir.x * delta
 	cameraInputDir = Vector2.ZERO
+	
 	# zoom in and out
 	var scroll = Input.get_axis("scroll_down", "scroll_up")
 	if scroll:
 		cameraSpringArm.spring_length += scroll * delta * 2.0
 		cameraSpringArm.spring_length = clamp(cameraSpringArm.spring_length, 2.0, 10.0)
+	
+	# toggle sprinting
+	if Input.is_action_just_pressed("sprint"):
+		isSprinting = !isSprinting
 	
 	move_and_slide()
 

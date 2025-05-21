@@ -1,7 +1,8 @@
-class_name PlayerJump extends PlayerState
+class_name PlayerDoubleJump extends PlayerState
 
 func enter():
 	player.velocity.y = player.jumpForce
+	player.canDoubleJump = false
 
 func exit():
 	pass

@@ -4,12 +4,16 @@ var states : Dictionary = {}
 var curState : State
 @export var initialState : State
 
+# TODO: will probably handle animation switching in here that way it's generic
+
 func _ready() -> void:
 	for child in get_children():
 		if child is State:
 			states[child.name.to_upper()] = child
 			child.transition.connect(on_state_transition)
 	if initialState:
+		# need this await here or any references to our parent won't be ready in time for initialState.enter()
+		await get_parent().ready
 		initialState.enter()
 		curState = initialState
 

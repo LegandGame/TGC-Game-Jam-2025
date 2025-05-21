@@ -1,23 +1,27 @@
-class_name PlayerJump extends PlayerState
+class_name PlayerFall extends PlayerState
 
 func enter():
-	player.velocity.y = player.jumpForce
+	pass
 
 func exit():
+	# emit dust particles here
 	pass
 
 func update(_delta : float):
 	pass
 
 func physics_update(delta : float):
+	# transition to idle
 	if player.is_on_floor():
 		transition.emit(self, "idle")
-	if player.velocity.y <= 0.0:
-		transition.emit(self, "fall")
 	
 	# apply gravity
 	player.velocity.y += player.gravity * delta
 	player.velocity.y = min(player.velocity.y, player.terminalVelo)
+	
+	# transition to jump
+	if Input.is_action_just_pressed("jump") and player.canDoubleJump:
+		transition.emit(self, "doublejump")
 	
 	# air movement
 	var direction := get_input_direction()

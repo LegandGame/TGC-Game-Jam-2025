@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cprdlxpgmmxr1"]
+
+[ext_resource type="Script" uid="uid://cpgyi002n12n8" path="res://Common/interactable.gd" id="1_da65k"]
+[ext_resource type="Script" uid="uid://ccoi0yo227ajt" path="res://Environment/Seed/seed.gd" id="1_o3sjt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3sjt"]
+albedo_color = Color(0, 0.657907, 0.00667131, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0qjem"]
+radius = 0.828063
+
+[node name="Seed" type="Node3D"]
+script = ExtResource("1_o3sjt")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+material = SubResource("StandardMaterial3D_o3sjt")
+
+[node name="Interactable" type="Area3D" parent="."]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_da65k")
+metadata/_custom_type_script = "uid://cpgyi002n12n8"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable"]
+shape = SubResource("SphereShape3D_0qjem")

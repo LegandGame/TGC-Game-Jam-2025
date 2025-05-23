@@ -32,9 +32,11 @@ func set_cur_health(new_value : float) -> void:
 func set_max_health(new_value : float, alter_cur : bool = false) -> void:
 	var diff = maxHealth - new_value
 	maxHealth = new_value
+	clamp_health()
 	if alter_cur:
 		curHealth += diff
 		clamp_health()
+		cur_health_changed.emit(curHealth)
 	if curHealth <= 0 or maxHealth <= 0:
 		health_empty.emit()
 	max_health_changed.emit(maxHealth)
@@ -50,9 +52,11 @@ func change_cur_health(difference : float) -> void:
 
 func change_max_health(difference : float, alter_cur : bool = false) -> void:
 	maxHealth += difference
+	clamp_health()
 	if alter_cur:
 		curHealth += difference
 		clamp_health()
+		cur_health_changed.emit(curHealth)
 	if curHealth <= 0 or maxHealth <= 0:
 		health_empty.emit()
 	max_health_changed.emit(maxHealth)

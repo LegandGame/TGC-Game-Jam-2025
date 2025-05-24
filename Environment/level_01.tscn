@@ -47,6 +47,7 @@ jumpForce = 10.0
 groundAccel = 8.0
 airAccel = 8.0
 gravity = -25.0
+fov = 80.0
 
 [node name="Lighting" type="Node3D" parent="."]
 

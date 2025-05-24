@@ -1,3 +1,59 @@
-[gd_scene format=3 uid="uid://bb2j14h7dd1qo"]
+[gd_scene load_steps=5 format=3 uid="uid://bb2j14h7dd1qo"]
+
+[ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_jbwu0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jbwu0"]
+sky_top_color = Color(0.419318, 0.460197, 0.85151, 1)
+sky_horizon_color = Color(0.698733, 0.701203, 0.790032, 1)
+ground_horizon_color = Color(0.698733, 0.701203, 0.790032, 1)
+
+[sub_resource type="Sky" id="Sky_bst0x"]
+sky_material = SubResource("ProceduralSkyMaterial_jbwu0")
+
+[sub_resource type="Environment" id="Environment_sqxud"]
+background_mode = 2
+sky = SubResource("Sky_bst0x")
+tonemap_mode = 2
+sdfgi_enabled = true
+glow_enabled = true
 
 [node name="Level01" type="Node3D"]
+
+[node name="WorldGeometry" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="WorldGeometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, 0)
+use_collision = true
+size = Vector3(9, 1, 7)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="WorldGeometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.50894, 0.508455, -0.00261688)
+use_collision = true
+size = Vector3(4, 1, 7)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="WorldGeometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.991055, 1.00845, -2.00262)
+use_collision = true
+size = Vector3(5, 2, 3)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="WorldGeometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49106, 1.50845, 0.997383)
+use_collision = true
+size = Vector3(2, 3, 3)
+
+[node name="Player" parent="." instance=ExtResource("1_jbwu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00736618, 1.08133, 0.000531197)
+jumpForce = 10.0
+groundAccel = 8.0
+airAccel = 8.0
+gravity = -25.0
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 4.0233, 0)
+light_energy = 0.75
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("Environment_sqxud")

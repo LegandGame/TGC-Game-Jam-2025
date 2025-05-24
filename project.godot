@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="TCG Game Jam"
-run/main_scene="uid://da4nccnci7wmy"
+run/main_scene="uid://bb2j14h7dd1qo"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="TCG Game Jam"
 
 [file_customization]
 

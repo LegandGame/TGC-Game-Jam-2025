@@ -12,12 +12,16 @@ config_version=5
 
 config/name="TCG Game Jam"
 run/main_scene="uid://bb2j14h7dd1qo"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="TCG Game Jam"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrabrush/plugin.cfg")
 
 [file_customization]
 

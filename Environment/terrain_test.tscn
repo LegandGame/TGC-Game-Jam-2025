@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://cuwvo120nod88"]
+
+[ext_resource type="Script" uid="uid://i5jcj7ukvoen" path="res://addons/terrabrush/TerraBrush.cs" id="1_d8b2i"]
+[ext_resource type="Texture2D" uid="uid://ce4c6pdt00ph8" path="res://Environment/Node3D/Heightmap_0_0.res" id="2_rx4wb"]
+[ext_resource type="Script" uid="uid://d2qebwt0ednya" path="res://addons/terrabrush/Scripts/EditorResources/ZoneResource.cs" id="3_1l03t"]
+[ext_resource type="Script" uid="uid://nt172hqpx1j5" path="res://addons/terrabrush/Scripts/EditorResources/ZonesResource.cs" id="4_1kwah"]
+[ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="5_wdss8"]
+
+[sub_resource type="Resource" id="Resource_xkogq"]
+script = ExtResource("3_1l03t")
+ZonePosition = Vector2i(0, 0)
+HeightMapTexture = ExtResource("2_rx4wb")
+SplatmapsTexture = []
+FoliagesTexture = null
+ObjectsTexture = null
+
+[sub_resource type="Resource" id="Resource_kki34"]
+script = ExtResource("4_1kwah")
+Zones = [SubResource("Resource_xkogq")]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rx4wb"]
+sky_top_color = Color(0.419318, 0.460197, 0.85151, 1)
+sky_horizon_color = Color(0.698733, 0.701203, 0.790032, 1)
+ground_horizon_color = Color(0.698733, 0.701203, 0.790032, 1)
+
+[sub_resource type="Sky" id="Sky_bst0x"]
+sky_material = SubResource("ProceduralSkyMaterial_rx4wb")
+
+[sub_resource type="Environment" id="Environment_1l03t"]
+background_mode = 2
+sky = SubResource("Sky_bst0x")
+tonemap_mode = 2
+sdfgi_enabled = true
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="TerraBrush" type="Node3D" parent="."]
+script = ExtResource("1_d8b2i")
+DataPath = "res://Environment/Node3D"
+TerrainZones = SubResource("Resource_kki34")
+metadata/_custom_type_script = "uid://i5jcj7ukvoen"
+metadata/_edit_lock_ = false
+
+[node name="Player" parent="." instance=ExtResource("5_wdss8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00736618, 8.45714, 26.6265)
+jumpForce = 10.0
+groundAccel = 8.0
+airAccel = 8.0
+gravity = -25.0
+fov = 80.0
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 4.0233, 0)
+light_energy = 0.75
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("Environment_1l03t")

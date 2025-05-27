@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1gpr016q5nlc"]
+
+[ext_resource type="Script" uid="uid://dfvf6kwoxlklb" path="res://Environment/Trash_Zone/Trash_Zone_Handler/trash_zone_handler.gd" id="1_k4l5b"]
+[ext_resource type="Script" uid="uid://cvkvog5ij3rpo" path="res://Common/Hitbox_Hurtbox/hitbox.gd" id="2_s7t15"]
+
+[node name="TrashZoneHandler" type="Node3D"]
+script = ExtResource("1_k4l5b")
+
+[node name="DamagePlayerTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Hitbox" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("2_s7t15")
+value = -0.1
+metadata/_custom_type_script = "uid://cvkvog5ij3rpo"
+
+[node name="MeshHolder" type="Node3D" parent="."]

@@ -21,7 +21,7 @@ project/assembly_name="TCG Game Jam"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/terrabrush/plugin.cfg")
+enabled=PackedStringArray()
 
 [file_customization]
 

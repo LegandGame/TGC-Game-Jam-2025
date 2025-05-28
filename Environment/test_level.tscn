@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://da4nccnci7wmy"]
+[gd_scene load_steps=14 format=3 uid="uid://da4nccnci7wmy"]
 
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_bst0x"]
-[ext_resource type="Script" uid="uid://cvkvog5ij3rpo" path="res://Common/Hitbox_Hurtbox/hitbox.gd" id="2_17f7b"]
 [ext_resource type="PackedScene" uid="uid://cprdlxpgmmxr1" path="res://Environment/Seed/seed.tscn" id="3_8uj1e"]
+[ext_resource type="PackedScene" uid="uid://b1gpr016q5nlc" path="res://Environment/Trash_Zone/Trash_Zone_Handler/trash_zone_handler.tscn" id="4_8ks4w"]
 [ext_resource type="PackedScene" uid="uid://q4nrk4l1g0ur" path="res://Environment/Seed_Pot/seed_pot.tscn" id="4_kh4g5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yijdk"]
@@ -26,10 +26,13 @@ albedo_color = Color(0.317647, 1, 0.309804, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bst0x"]
 albedo_color = Color(0, 0, 1, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_8uj1e"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_kh4g5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_17f7b"]
-albedo_color = Color(1, 0, 0, 1)
+[sub_resource type="SphereShape3D" id="SphereShape3D_8ks4w"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vhre0"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_chco4"]
 
 [node name="TestLevel" type="Node3D"]
 
@@ -86,21 +89,27 @@ material = SubResource("StandardMaterial3D_bst0x")
 [node name="Player" parent="." instance=ExtResource("1_bst0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08847, 0)
 
-[node name="TestHitbox" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.64014, 1.2164, 0)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("2_17f7b")
-metadata/_custom_type_script = "uid://cvkvog5ij3rpo"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TestHitbox"]
-shape = SubResource("BoxShape3D_8uj1e")
-
-[node name="CSGSphere3D" type="CSGSphere3D" parent="TestHitbox"]
-material_override = SubResource("StandardMaterial3D_17f7b")
-
 [node name="Seed" parent="." instance=ExtResource("3_8uj1e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0762, 0.807236, 0)
 
 [node name="SeedPot" parent="." instance=ExtResource("4_kh4g5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.49758, 0.231486, 3.95641)
+
+[node name="TrashZoneHandler" parent="." instance=ExtResource("4_8ks4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.48446, 1.238, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TrashZoneHandler/Hitbox" index="0"]
+shape = SubResource("BoxShape3D_kh4g5")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="TrashZoneHandler/Hitbox" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2979, 0, 0)
+shape = SubResource("SphereShape3D_8ks4w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TrashZoneHandler/MeshHolder" index="0"]
+mesh = SubResource("BoxMesh_vhre0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="TrashZoneHandler/MeshHolder" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29106, 0, 0)
+mesh = SubResource("SphereMesh_chco4")
+
+[editable path="TrashZoneHandler"]

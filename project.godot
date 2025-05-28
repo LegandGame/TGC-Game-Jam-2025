@@ -21,7 +21,7 @@ project/assembly_name="TCG Game Jam"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/terrabrush/plugin.cfg")
+enabled=PackedStringArray("res://addons/assetplacer/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [file_customization]
 
@@ -93,3 +93,7 @@ interact={
 3d_physics/layer_2="Player"
 3d_physics/layer_3="Hostile"
 3d_physics/layer_4="Interactable"
+
+[rendering]
+
+lights_and_shadows/use_physical_light_units=true

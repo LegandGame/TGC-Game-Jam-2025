@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bb2j14h7dd1qo"]
+[gd_scene load_steps=11 format=3 uid="uid://bb2j14h7dd1qo"]
 
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_jbwu0"]
+[ext_resource type="Script" uid="uid://btqf22n2s8oli" path="res://addons/boujie_water_shader/prefabs/ocean_prefab.gd" id="1_vwcvh"]
 [ext_resource type="LightmapGIData" uid="uid://0ysxq7gfyis3" path="res://Environment/level_01.lmbake" id="2_sqxud"]
+[ext_resource type="Terrain3DAssets" uid="uid://b4mde02r42bwc" path="res://Environment/game_terrain.res" id="2_vwcvh"]
 [ext_resource type="Terrain3DMaterial" uid="uid://bc2166nsd4j01" path="res://Environment/game_terrain_mat.tres" id="3_m6yk8"]
-[ext_resource type="Terrain3DAssets" uid="uid://dhig5euug7bpf" path="res://Environment/game_terrain.tres" id="4_vwcvh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jbwu0"]
 sky_top_color = Color(0.544964, 0.658842, 0.796344, 1)
@@ -30,7 +31,10 @@ auto_exposure_enabled = true
 auto_exposure_min_exposure_value = -3.0
 auto_exposure_max_exposure_value = 12.0
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_8w78v"]
+
 [node name="Level01" type="Node3D"]
+script = ExtResource("1_vwcvh")
 
 [node name="WorldGeometry" type="Node3D" parent="."]
 
@@ -41,7 +45,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.515, 50, 0)
 size = Vector3(10, 100, 10)
 
 [node name="Mountains_CSG" type="CSGBox3D" parent="WorldGeometry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.567, 50, -250)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.567, 150, -250)
 size = Vector3(10, 100, 10)
 
 [node name="Factory_CSG" type="CSGBox3D" parent="WorldGeometry"]
@@ -55,7 +59,7 @@ size = Vector3(10, 100, 10)
 [node name="Terrain3D" type="Terrain3D" parent="WorldGeometry"]
 data_directory = "res://Environment/GameTerrain"
 material = ExtResource("3_m6yk8")
-assets = ExtResource("4_vwcvh")
+assets = ExtResource("2_vwcvh")
 top_level = true
 metadata/_edit_lock_ = true
 
@@ -92,3 +96,6 @@ light_data = ExtResource("2_sqxud")
 transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574, -0.163281, 1.55015, -1.18078)
 visible = false
 max_distance = 0.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_8w78v")

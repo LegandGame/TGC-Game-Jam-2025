@@ -1,91 +1,9 @@
-[gd_scene load_steps=22 format=4 uid="uid://bb2j14h7dd1qo"]
+[gd_scene load_steps=9 format=3 uid="uid://bb2j14h7dd1qo"]
 
-[ext_resource type="PackedScene" uid="uid://bb6oitdv71g80" path="res://Common/Meshes/Can.fbx" id="1_4408j"]
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_jbwu0"]
 [ext_resource type="LightmapGIData" uid="uid://0ysxq7gfyis3" path="res://Environment/level_01.lmbake" id="2_sqxud"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_4408j"]
-lightmap_size_hint = Vector2i(270, 290)
-_surfaces = [{
-"aabb": AABB(-4.5, -0.5, -3.5, 9, 1, 7),
-"attribute_data": PackedByteArray("AACAPwAAgD+jhn8/Ao9/PwAAgD8AAAAAo4Z/P/QWAz8AAAAAAAAAAGWdaz/0FgM/AACAPwAAgD+JiIg8BB7/PgAAgD8AAAAAqeEvPwQe/z4AAAAAAAAAAKnhLz8QB3w/AACAPwAAgD+BZF0/ccAjPwAAgD8AAAAAQntJP3HAIz8AAAAAAAAAAEJ7ST8HPH48AAAAAAAAgD9lnWs/Ao9/PwAAgD8AAIA/1rkyP0dYLj8AAIA/AAAAABWjRj9HWC4/AAAAAAAAAAAVo0Y/XAxpPQAAAAAAAAAAwRYsPxnS+T4AAAAAAACAP9a58joZ0vk+AACAPwAAgD/WufI6ePzhOgAAAAAAAIA/iYiIPBAHfD8AAAAAAACAP9a5Mj9cDGk9AACAPwAAgD/tJXQ/ePzhOgAAgD8AAAAA7SV0PxnS+T4AAAAAAAAAAK48YD8Z0vk+AAAAAAAAgD+BZF0/Bzx+PAAAgD8AAAAAwRYsP3j84ToAAAAAAACAP648YD94/OE6"),
-"format": 34359742519,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAgAJAAAACgALAAwADQAOAA8ABQAQAAMADAARAAoAEgATABQACAAVAAYADwAWAA0AFAAXABIA"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AACQwAAAAL8AAGBAAACQwAAAAL8AAGDAAACQwAAAAD8AAGDAAACQQAAAAL8AAGDAAACQwAAAAL8AAGDAAACQwAAAAL8AAGBAAACQwAAAAD8AAGDAAACQwAAAAL8AAGDAAACQQAAAAL8AAGDAAACQwAAAAD8AAGBAAACQwAAAAL8AAGBAAACQwAAAAD8AAGBAAACQQAAAAD8AAGBAAACQQAAAAD8AAGBAAACQwAAAAD8AAGBAAACQwAAAAD8AAGDAAACQQAAAAL8AAGBAAACQQAAAAL8AAGBAAACQQAAAAL8AAGDAAACQQAAAAL8AAGBAAACQQAAAAD8AAGBAAACQQAAAAD8AAGDAAACQQAAAAD8AAGDAAACQQAAAAD8AAGDAAAAAgP9//n8AAACA/3/+fwAAAID/f/5/AIAAAP//AAAAgAAA//8AAACAAAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAAAgP9//n//f/9/AAD/P/9//38AAP8//3//fwAA/z8AgP////8AAACA/////wAAAID/////AAAAgAAA//8AAP9//38AAP8///8AgP9//n///wCA/3/+f///AID/f/5//////wAA/z8AgP////8AAP//AID/f/5/")
-}]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sqxud"]
-points = PackedVector3Array(-4.5, -0.5, -3.5, -4.5, 0.5, -3.5, 4.5, -0.5, -3.5, -4.5, -0.5, 3.5, -4.5, 0.5, 3.5, 4.5, 0.5, -3.5, 4.5, -0.5, 3.5, 4.5, 0.5, 3.5)
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_m6yk8"]
-lightmap_size_hint = Vector2i(190, 194)
-_surfaces = [{
-"aabb": AABB(-2, -0.5, -3.5, 4, 1, 7),
-"attribute_data": PackedByteArray("AACAPwAAgD+JU38/AABAPwAAgD8AAAAAiVN/P0cFvjwAAAAAAAAAABYIYz9HBb48AACAPwAAgD+MtOM+RwW+PAAAgD8AAAAATv1eP0cFvjwAAAAAAAAAAE79Xj8AAEA/AACAPwAAgD9O/V4/GFd/PwAAgD8AAAAATv1eP/2gYz8AAAAAAAAAAIy04z79oGM/AAAAAAAAgD8WCGM/AABAPwAAgD8AAIA//Z7bPv2gYz8AAIA/AAAAAP2e2z4YV38/AAAAAAAAAACSdiw7GFd/PwAAAAAAAAAA/Z7bPr64Oj8AAAAAAACAP5J2LDu+uDo/AACAPwAAgD+Sdiw7P+goOwAAAAAAAIA/jLTjPgAAQD8AAAAAAACAP5J2LDv9oGM/AACAPwAAgD9kBcI8jKtfPwAAgD8AAAAAxwpEP4yrXz8AAAAAAAAAAMcKRD9x9UM/AAAAAAAAgD+MtOM+GFd/PwAAgD8AAAAA/Z7bPj/oKDsAAAAAAACAP2QFwjxx9UM/"),
-"format": 34359742519,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAgAJAAAACgALAAwADQAOAA8ABQAQAAMADAARAAoAEgATABQACAAVAAYADwAWAA0AFAAXABIA"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAwAAAAL8AAGBAAAAAwAAAAL8AAGDAAAAAwAAAAD8AAGDAAAAAQAAAAL8AAGDAAAAAwAAAAL8AAGDAAAAAwAAAAL8AAGBAAAAAwAAAAD8AAGDAAAAAwAAAAL8AAGDAAAAAQAAAAL8AAGDAAAAAwAAAAD8AAGBAAAAAwAAAAL8AAGBAAAAAwAAAAD8AAGBAAAAAQAAAAD8AAGBAAAAAQAAAAD8AAGBAAAAAwAAAAD8AAGBAAAAAwAAAAD8AAGDAAAAAQAAAAL8AAGBAAAAAQAAAAL8AAGBAAAAAQAAAAL8AAGDAAAAAQAAAAL8AAGBAAAAAQAAAAD8AAGBAAAAAQAAAAD8AAGDAAAAAQAAAAD8AAGDAAAAAQAAAAD8AAGDAAAAAgP9//n8AAACA/3/+fwAAAID/f/5/AIAAAP//AAAAgAAA//8AAACAAAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAAAgP9//n//f/9/AAD/P/9//38AAP8//3//fwAA/z8AgP////8AAACA/////wAAAID/////AAAAgAAA//8AAP9//38AAP8///8AgP9//n///wCA/3/+f///AID/f/5//////wAA/z8AgP////8AAP//AID/f/5/")
-}]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4408j"]
-points = PackedVector3Array(2, 0.5, 3.5, 2, -0.5, 3.5, 2, 0.5, -3.5, -2, 0.5, 3.5, -2, -0.5, 3.5, 2, -0.5, -3.5, -2, 0.5, -3.5, -2, -0.5, -3.5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqxud"]
-albedo_color = Color(0.858083, 0.365706, 0.102651, 1)
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_vwcvh"]
-lightmap_size_hint = Vector2i(190, 170)
-_surfaces = [{
-"aabb": AABB(-2.5, -1, -1.5, 5, 2, 3),
-"attribute_data": PackedByteArray("AACAPwAAgD+JU38/RUXFPgAAgD8AAAAAiVN/P9nY2DwAAAAAAAAAAI8VSD/Z2Ng8AACAPwAAgD+Sdiw7QkLCPgAAgD8AAAAABcIIP0JCwj4AAAAAAAAAAAXCCD/9/Dw/AACAPwAAgD+6JQ4/Pz9/PwAAgD8AAAAAuiUOP4KBQT8AAAAAAAAAAGQFwjyCgUE/AAAAAAAAgD+PFUg/RUXFPgAAgD8AAIA/zcwMP9/eHj8AAIA/AAAAAMcKRD/f3h4/AAAAAAAAAADHCkQ/2djYPAAAAAAAAAAABcIIPzk5uT4AAAAAAACAP5J2LDs5Obk+AACAPwAAgD+Sdiw7wcBAOwAAAAAAAIA/knYsO/38PD8AAAAAAACAP83MDD/Z2Ng8AACAPwAAgD98bkk/Y2MjPwAAgD8AAAAAfG5JPz8/fz8AAAAAAAAAAIEwEj8/P38/AAAAAAAAgD9kBcI8Pz9/PwAAgD8AAAAABcIIP8HAQDsAAAAAAACAP4EwEj9jYyM/"),
-"format": 34359742519,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAgAJAAAACgALAAwADQAOAA8ABQAQAAMADAARAAoAEgATABQACAAVAAYADwAWAA0AFAAXABIA"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAgwAAAgL8AAMA/AAAgwAAAgL8AAMC/AAAgwAAAgD8AAMC/AAAgQAAAgL8AAMC/AAAgwAAAgL8AAMC/AAAgwAAAgL8AAMA/AAAgwAAAgD8AAMC/AAAgwAAAgL8AAMC/AAAgQAAAgL8AAMC/AAAgwAAAgD8AAMA/AAAgwAAAgL8AAMA/AAAgwAAAgD8AAMA/AAAgQAAAgD8AAMA/AAAgQAAAgD8AAMA/AAAgwAAAgD8AAMA/AAAgwAAAgD8AAMC/AAAgQAAAgL8AAMA/AAAgQAAAgL8AAMA/AAAgQAAAgL8AAMC/AAAgQAAAgL8AAMA/AAAgQAAAgD8AAMA/AAAgQAAAgD8AAMC/AAAgQAAAgD8AAMC/AAAgQAAAgD8AAMC/AAAAgP9//n8AAACA/3/+fwAAAID/f/5/AIAAAP//AAAAgAAA//8AAACAAAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAAAgP9//n//f/9/AAD/P/9//38AAP8//3//fwAA/z8AgP////8AAACA/////wAAAID/////AAAAgAAA//8AAP9//38AAP8///8AgP9//n///wCA/3/+f///AID/f/5//////wAA/z8AgP////8AAP//AID/f/5/")
-}]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m6yk8"]
-points = PackedVector3Array(-2.5, -1, -1.5, -2.5, 1, -1.5, 2.5, -1, -1.5, -2.5, -1, 1.5, -2.5, 1, 1.5, 2.5, 1, -1.5, 2.5, -1, 1.5, 2.5, 1, 1.5)
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_8w78v"]
-lightmap_size_hint = Vector2i(130, 150)
-_surfaces = [{
-"aabb": AABB(-1, -1.5, -1.5, 2, 3, 3),
-"attribute_data": PackedByteArray("AACAPwAAgD9yI3c/hevRPgAAgD8AAAAA4Af+PoXr0T4AAAAAAAAAAOAH/j4OdFo7AACAPwAAgD/gB/4+YCw5PwAAgD8AAAAA4Af+Powlfz8AAAAAAAAAAHIjdz+MJX8/AACAPwAAgD8jN/I+jCV/PwAAgD8AAAAAwQ98O4wlfz8AAAAAAAAAAMEPfDtgLDk/AAAAAAAAgD9yI3c/DnRaOwAAgD8AAIA/3cgNPacNND8AAIA/AAAAABD8AD+nDTQ/AAAAAAAAAAAQ/AA/9ijcPgAAAAAAAAAA8AN/P6cNND8AAAAAAACAP/ADfz/2KNw+AACAPwAAgD9u5AY/9ijcPgAAAAAAAIA/ciN3P2AsOT8AAAAAAACAP93IDT32KNw+AACAPwAAgD8jN/I+DnRaOwAAgD8AAAAAIzfyPoXr0T4AAAAAAAAAAMEPfDuF69E+AAAAAAAAgD8jN/I+YCw5PwAAgD8AAAAAbuQGP6cNND8AAAAAAACAP8EPfDsOdFo7"),
-"format": 34359742519,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAgAJAAAACgALAAwADQAOAA8ABQAQAAMADAARAAoAEgATABQACAAVAAYADwAWAA0AFAAXABIA"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AACAvwAAwL8AAMA/AACAvwAAwL8AAMC/AACAvwAAwD8AAMC/AACAPwAAwL8AAMC/AACAvwAAwL8AAMC/AACAvwAAwL8AAMA/AACAvwAAwD8AAMC/AACAvwAAwL8AAMC/AACAPwAAwL8AAMC/AACAvwAAwD8AAMA/AACAvwAAwL8AAMA/AACAvwAAwD8AAMA/AACAPwAAwD8AAMA/AACAPwAAwD8AAMA/AACAvwAAwD8AAMA/AACAvwAAwD8AAMC/AACAPwAAwL8AAMA/AACAPwAAwL8AAMA/AACAPwAAwL8AAMC/AACAPwAAwL8AAMA/AACAPwAAwD8AAMA/AACAPwAAwD8AAMC/AACAPwAAwD8AAMC/AACAPwAAwD8AAMC/AAAAgP9//n8AAACA/3/+fwAAAID/f/5/AIAAAP//AAAAgAAA//8AAACAAAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAAAgP9//n//f/9/AAD/P/9//38AAP8//3//fwAA/z8AgP////8AAACA/////wAAAID/////AAAAgAAA//8AAP9//38AAP8///8AgP9//n///wCA/3/+f///AID/f/5//////wAA/z8AgP////8AAP//AID/f/5/")
-}]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vwcvh"]
-points = PackedVector3Array(1, 1.5, 1.5, -1, 1.5, 1.5, 1, -1.5, 1.5, 1, 1.5, -1.5, -1, 1.5, -1.5, -1, -1.5, 1.5, 1, -1.5, -1.5, -1, -1.5, -1.5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6yk8"]
-albedo_color = Color(0.947853, 0.000215048, 0.815044, 1)
-emission_enabled = true
-
-[sub_resource type="TorusMesh" id="TorusMesh_2we3s"]
-lightmap_size_hint = Vector2i(33, 9)
-material = SubResource("StandardMaterial3D_m6yk8")
-add_uv2 = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_sqxud"]
-size = Vector3(1.8194, 0.6875, 1.89948)
+[ext_resource type="Terrain3DMaterial" uid="uid://bc2166nsd4j01" path="res://Environment/game_terrain_mat.tres" id="3_m6yk8"]
+[ext_resource type="Terrain3DAssets" uid="uid://dhig5euug7bpf" path="res://Environment/game_terrain.tres" id="4_vwcvh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jbwu0"]
 sky_top_color = Color(0.544964, 0.658842, 0.796344, 1)
@@ -112,89 +30,41 @@ auto_exposure_enabled = true
 auto_exposure_min_exposure_value = -3.0
 auto_exposure_max_exposure_value = 12.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4408j"]
-albedo_color = Color(0.5, 0.5, 0.5, 1)
-metallic = 1.0
-roughness = 0.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_m6yk8"]
-material = SubResource("StandardMaterial3D_4408j")
-
 [node name="Level01" type="Node3D"]
 
 [node name="WorldGeometry" type="Node3D" parent="."]
 
 [node name="Meshes" type="Node3D" parent="WorldGeometry"]
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="WorldGeometry/Meshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.5, 0)
-mesh = SubResource("ArrayMesh_4408j")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="WorldGeometry/Meshes/CSGBakedMeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Meshes/CSGBakedMeshInstance3D/StaticBody3D"]
+[node name="Hub_CSG" type="CSGBox3D" parent="WorldGeometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.9652, 0, 10.24)
 visible = false
-shape = SubResource("ConvexPolygonShape3D_sqxud")
+size = Vector3(500, 1, 500)
 
-[node name="CSGBakedMeshInstance3D2" type="MeshInstance3D" parent="WorldGeometry/Meshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.50894, 0.508455, -0.00261688)
-mesh = SubResource("ArrayMesh_m6yk8")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="WorldGeometry/Meshes/CSGBakedMeshInstance3D2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Meshes/CSGBakedMeshInstance3D2/StaticBody3D"]
+[node name="Mountains_CSG" type="CSGBox3D" parent="WorldGeometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1815, 0, -1364.61)
 visible = false
-shape = SubResource("ConvexPolygonShape3D_4408j")
+size = Vector3(1680.11, 1, 500)
 
-[node name="CSGBakedMeshInstance3D3" type="MeshInstance3D" parent="WorldGeometry/Meshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.991055, 1.00845, -2.00262)
-material_override = SubResource("StandardMaterial3D_sqxud")
-mesh = SubResource("ArrayMesh_vwcvh")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="WorldGeometry/Meshes/CSGBakedMeshInstance3D3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Meshes/CSGBakedMeshInstance3D3/StaticBody3D"]
+[node name="CSGBox3D4" type="CSGBox3D" parent="WorldGeometry"]
+transform = Transform3D(0.573748, 0, -0.819032, 0, 1, 0, 0.819032, 0, 0.573748, -1794.6, 0, 1028.22)
 visible = false
-shape = SubResource("ConvexPolygonShape3D_m6yk8")
+size = Vector3(1055.31, 1, 1077.43)
 
-[node name="CSGBakedMeshInstance3D4" type="MeshInstance3D" parent="WorldGeometry/Meshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49106, 1.50845, 0.997383)
-mesh = SubResource("ArrayMesh_8w78v")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="WorldGeometry/Meshes/CSGBakedMeshInstance3D4"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Meshes/CSGBakedMeshInstance3D4/StaticBody3D"]
+[node name="CSGBox3D2" type="CSGBox3D" parent="WorldGeometry"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 1110.98, 0, 624.284)
 visible = false
-shape = SubResource("ConvexPolygonShape3D_vwcvh")
+size = Vector3(500, 1, 500)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldGeometry/Meshes"]
-transform = Transform3D(0.804282, -0.594247, 0, 0.594247, 0.804282, 0, 0, 0, 1, 0.636564, 0.759932, 1.75318)
-mesh = SubResource("TorusMesh_2we3s")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="WorldGeometry/Meshes/MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Meshes/MeshInstance3D/StaticBody3D"]
-transform = Transform3D(0.994647, -0.103331, 0, 0.103331, 0.994647, 0, 0, 0, 1, -0.119501, 0.144676, 0.047455)
-visible = false
-shape = SubResource("BoxShape3D_sqxud")
-
-[node name="Can_fbx" parent="WorldGeometry/Meshes" instance=ExtResource("1_4408j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.511415, 0, 2.82174)
-
-[node name="Can_fbx2" parent="WorldGeometry/Meshes" instance=ExtResource("1_4408j")]
-transform = Transform3D(0.998342, 0, 0.0575642, 0, 1, 0, -0.0575642, 0, 0.998342, -0.864304, 0, 1.75683)
-
-[node name="Can_fbx3" parent="WorldGeometry/Meshes" instance=ExtResource("1_4408j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.263, 1.00846, 3.20751)
-
-[node name="Can_fbx4" parent="WorldGeometry/Meshes" instance=ExtResource("1_4408j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.15885, 1.00846, 2.73538)
-
-[node name="Can_fbx5" parent="WorldGeometry/Meshes" instance=ExtResource("1_4408j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.00845, 1)
+[node name="Terrain3D" type="Terrain3D" parent="WorldGeometry"]
+data_directory = "res://Environment/GameTerrain"
+material = ExtResource("3_m6yk8")
+assets = ExtResource("4_vwcvh")
+top_level = true
+metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_jbwu0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00736618, 1.08133, 0.000531197)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 jumpForce = 10.0
 groundAccel = 8.0
 airAccel = 8.0
@@ -215,31 +85,14 @@ shadow_enabled = true
 environment = SubResource("Environment_sqxud")
 camera_attributes = SubResource("CameraAttributesPhysical_jbwu0")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lighting"]
-transform = Transform3D(0.980546, -0.136885, -0.140685, 0.136885, -0.0368356, 0.989902, -0.140685, -0.989902, -0.0173815, 1.59027, 4.65241, -1.03401)
-light_intensity_lumens = 800000.0
-light_bake_mode = 1
-shadow_enabled = true
-spot_angle = 32.0372
-
-[node name="LightmapGI" type="LightmapGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00327778, 0.0100541, -0.0043087)
+[node name="LightmapGI" type="LightmapGI" parent="Lighting"]
+transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574, -0.00265669, 0.0100541, 0.00471707)
 quality = 3
 supersampling = true
 generate_probes_subdiv = 3
 light_data = ExtResource("2_sqxud")
 
-[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55015, 1.19202)
+[node name="ReflectionProbe" type="ReflectionProbe" parent="Lighting"]
+transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574, -0.163281, 1.55015, -1.18078)
 visible = false
 max_distance = 0.5
-
-[node name="ReflectionProbe2" type="ReflectionProbe" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.24243, 3.67357, 1.19202)
-visible = false
-max_distance = 0.5
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.51159, 0.452884, 2.52341)
-gi_mode = 2
-mesh = SubResource("SphereMesh_m6yk8")

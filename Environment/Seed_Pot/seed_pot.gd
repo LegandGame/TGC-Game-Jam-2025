@@ -26,8 +26,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and canInteract:
 		if not isHolding and playerRef.seedTracker.seedCount > 0:
 			playerRef.seedTracker.remove_seed()
+			playerRef.checkpoint = self
 			isHolding = true
 		elif isHolding and canRetrieve:
 			playerRef.seedTracker.add_seed()
+			playerRef.checkpoint = null
 			isHolding = false
 		disable_deposit(playerRef)

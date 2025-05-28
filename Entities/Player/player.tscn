@@ -97,3 +97,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.70828, 0)
 billboard = 1
 text = "Debug Test"
 font_size = 64
+
+[node name="CombatTimer" type="Timer" parent="."]
+one_shot = true

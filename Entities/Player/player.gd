@@ -8,8 +8,9 @@ class_name Player extends CharacterBody3D
 @onready var hurtbox : HurtboxComponent = $Hurtbox
 @onready var seedTracker := $SeedTracker
 @onready var health : HealthComponent = $SeedTracker/Health
+@onready var combatTimer : Timer = $CombatTimer
 
-@export_category("Properties")
+@export_category("Movement")
 @export var walkSpeed : float = 5.0
 @export var sprintSpeed : float = 8.0
 @export var jumpForce : float = 4.5
@@ -25,8 +26,13 @@ var cameraInputDir := Vector2.ZERO
 var invertMouseDirY := true
 var invertMouseDirX := false
 
+@export_category("Properties")
+@export var healRate : float = 0.5
+
 var isSprinting : bool
-var canDoubleJump : bool = true	# temp. will implement stamina later
+var canDoubleJump : bool = true
+var outOfCombat : bool = true
+var checkpoint : StaticBody3D
 
 func _ready() -> void:
 	# change camera fov
@@ -35,8 +41,10 @@ func _ready() -> void:
 	for state in stateMachine.states.values():
 		state.player = self
 	# connect health
-	hurtbox.hurt.connect(health.change_cur_health)
-	health.health_empty.connect(die)
+	hurtbox.hurt.connect(take_damage)
+	health.health_empty.connect(respawn)
+	# connect combat timer
+	combatTimer.timeout.connect(_on_combat_timer_timeout)
 	# capture player mouse
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -49,6 +57,10 @@ func _physics_process(delta: float) -> void:
 	cameraPivot.rotation.x = clamp(cameraPivot.rotation.x, deg_to_rad(-80), deg_to_rad(30))
 	cameraPivot.rotation.y -= cameraInputDir.x * delta
 	cameraInputDir = Vector2.ZERO
+	
+	# heal out of combat
+	if outOfCombat:
+		health.change_cur_health(healRate * delta)
 	
 	# zoom in and out
 	var scroll = Input.get_axis("scroll_down", "scroll_up")
@@ -84,5 +96,18 @@ func _unhandled_input(event: InputEvent) -> void:
 			cameraInputDir.x = -event.screen_relative.x * mouseSensitivity
 
 
-func die() -> void:
-	get_tree().quit()
+func take_damage(damage : float) -> void:
+	health.change_cur_health(damage)
+	outOfCombat = false
+	combatTimer.start()
+
+func _on_combat_timer_timeout() -> void:
+	outOfCombat = true
+
+func respawn() -> void:
+	var buffer := Vector3(0, 2.5, 0)
+	health.reset_health()
+	if checkpoint:
+		self.position = checkpoint.position + buffer
+	else:
+		self.position = buffer

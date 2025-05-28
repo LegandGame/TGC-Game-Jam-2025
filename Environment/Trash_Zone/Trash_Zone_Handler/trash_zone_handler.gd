@@ -11,7 +11,6 @@ func _ready() -> void:
 	damagePlayerTimer.timeout.connect(_on_damgePlayerTimer_timeout)
 
 func _on_zone_area_entered(area: Area3D) -> void:
-	print("zone entereds")
 	# turn off hitbox when we hit something and start timer
 	if area is HurtboxComponent:
 		damagePlayerTimer.start()

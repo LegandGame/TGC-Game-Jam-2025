@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://da4nccnci7wmy"]
+[gd_scene load_steps=15 format=3 uid="uid://da4nccnci7wmy"]
 
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_bst0x"]
 [ext_resource type="PackedScene" uid="uid://cprdlxpgmmxr1" path="res://Environment/Seed/seed.tscn" id="3_8uj1e"]
@@ -19,6 +19,8 @@ sky = SubResource("Sky_kh4g5")
 tonemap_mode = 2
 sdfgi_enabled = true
 glow_enabled = true
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_kh4g5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yijdk"]
 albedo_color = Color(0.317647, 1, 0.309804, 1)
@@ -45,6 +47,7 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
 environment = SubResource("Environment_17f7b")
+camera_attributes = SubResource("CameraAttributesPhysical_kh4g5")
 
 [node name="Geometry" type="Node3D" parent="."]
 

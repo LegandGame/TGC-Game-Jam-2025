@@ -13,7 +13,13 @@ config_version=5
 config/name="TCG Game Jam"
 run/main_scene="uid://bb2j14h7dd1qo"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [dotnet]
 
@@ -31,6 +37,10 @@ folder_colors={
 "res://Entities/": "red",
 "res://Environment/": "green"
 }
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 

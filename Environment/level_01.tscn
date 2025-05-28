@@ -37,24 +37,20 @@ auto_exposure_max_exposure_value = 12.0
 [node name="Meshes" type="Node3D" parent="WorldGeometry"]
 
 [node name="Hub_CSG" type="CSGBox3D" parent="WorldGeometry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.9652, 0, 10.24)
-visible = false
-size = Vector3(500, 1, 500)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.515, 50, 0)
+size = Vector3(10, 100, 10)
 
 [node name="Mountains_CSG" type="CSGBox3D" parent="WorldGeometry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1815, 0, -1364.61)
-visible = false
-size = Vector3(1680.11, 1, 500)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.567, 50, -250)
+size = Vector3(10, 100, 10)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="WorldGeometry"]
-transform = Transform3D(0.573748, 0, -0.819032, 0, 1, 0, 0.819032, 0, 0.573748, -1794.6, 0, 1028.22)
-visible = false
-size = Vector3(1055.31, 1, 1077.43)
+[node name="Factory_CSG" type="CSGBox3D" parent="WorldGeometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -250, 50, 250)
+size = Vector3(10, 100, 10)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="WorldGeometry"]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 1110.98, 0, 624.284)
-visible = false
-size = Vector3(500, 1, 500)
+[node name="Swamp_CSG" type="CSGBox3D" parent="WorldGeometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 250, 50, 250)
+size = Vector3(10, 100, 10)
 
 [node name="Terrain3D" type="Terrain3D" parent="WorldGeometry"]
 data_directory = "res://Environment/GameTerrain"

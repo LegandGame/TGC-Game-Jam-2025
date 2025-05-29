@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bb2j14h7dd1qo"]
+[gd_scene load_steps=36 format=3 uid="uid://bb2j14h7dd1qo"]
 
 [ext_resource type="Script" uid="uid://dcqy72d7qx5pq" path="res://addons/proton_scatter/src/scatter.gd" id="1_28xfc"]
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_jbwu0"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://ujqv73sq43gg" path="res://addons/proton_scatter/src/scatter_item.gd" id="8_bqcvc"]
 [ext_resource type="Script" uid="uid://c0mvhdi13fdm1" path="res://addons/proton_scatter/src/scatter_shape.gd" id="9_qhhy6"]
 [ext_resource type="Script" uid="uid://lu4gs2di20lx" path="res://addons/proton_scatter/src/shapes/sphere_shape.gd" id="10_xb7ri"]
+[ext_resource type="Script" uid="uid://cvkvog5ij3rpo" path="res://Common/Hitbox_Hurtbox/hitbox.gd" id="11_3fhqe"]
 
 [sub_resource type="Resource" id="Resource_28xfc"]
 script = ExtResource("4_8mltw")
@@ -73,6 +74,9 @@ stack = Array[ExtResource("3_frrha")]([SubResource("Resource_28xfc"), SubResourc
 [sub_resource type="Resource" id="Resource_g8bsm"]
 script = ExtResource("10_xb7ri")
 radius = 4.60284
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_frrha"]
+size = Vector3(763.505, 5, 869.169)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m6yk8"]
 albedo_color = Color(0.462, 0.55, 0.516267, 1)
@@ -237,6 +241,17 @@ size = Vector3(2, 19, 5)
 [node name="House_CSG_19" type="CSGBox3D" parent="WorldGeometry"]
 transform = Transform3D(0.0620844, -0.5, -0.863797, -0.997427, -4.04228e-08, -0.0716888, 0.0358444, 0.866025, -0.498714, -231.817, 17.281, -17.021)
 size = Vector3(2, 19, 5)
+
+[node name="HitboxComponent" type="Area3D" parent="WorldGeometry"]
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("11_3fhqe")
+value = -1000.0
+metadata/_custom_type_script = "uid://cvkvog5ij3rpo"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/HitboxComponent"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 252.7, -34.8581, 149.624)
+shape = SubResource("BoxShape3D_frrha")
 
 [node name="Terrain3D" type="Terrain3D" parent="WorldGeometry"]
 data_directory = "res://Environment/GameTerrain"
@@ -465,5 +480,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.3762, 0.807236, 7.77024)
 
 [node name="SeedPot" parent="." instance=ExtResource("7_2we3s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.503, 0.846239, 14.6926)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0653683, -0.997861, 0, 0.997861, -0.0653683, 405.723, -27.1912, 257.005)
+use_collision = true
+height = 18.5475
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(0.946085, 0.302157, 0.11672, 0, 0.360339, -0.932822, -0.323917, 0.882529, 0.340911, 402.825, -29.9558, 259.726)
+use_collision = true
+height = 18.5475
 
 [editable path="TrashZoneHandler"]

@@ -32,7 +32,7 @@ var invertMouseDirX := false
 var isSprinting : bool
 var canDoubleJump : bool = true
 var outOfCombat : bool = true
-var checkpoint : StaticBody3D
+
 
 func _ready() -> void:
 	# change camera fov
@@ -107,7 +107,15 @@ func _on_combat_timer_timeout() -> void:
 func respawn() -> void:
 	var buffer := Vector3(0, 2.5, 0)
 	health.reset_health()
-	if checkpoint:
-		self.position = checkpoint.position + buffer
+	# find the nearest checkpoint
+	var nearestCheckpoint = null
+	var nearestCheckpointDistance = INF
+	for c in get_tree().get_nodes_in_group("checkpoint"):
+		if position.distance_squared_to(c.position) < nearestCheckpointDistance:
+			nearestCheckpointDistance = c.position
+			nearestCheckpoint = c
+	#respawn
+	if nearestCheckpoint:
+		position = nearestCheckpoint.position + buffer
 	else:
-		self.position = buffer
+		position = Vector3(0.0, 2.5, 0.0)

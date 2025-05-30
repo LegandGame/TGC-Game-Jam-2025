@@ -12,8 +12,12 @@ func update(_delta : float):
 func physics_update(delta : float):
 	if player.is_on_floor():
 		transition.emit(self, "idle")
+	
 	if player.velocity.y <= 0.0:
 		transition.emit(self, "fall")
+	
+	if Input.is_action_just_pressed("sprint") and player.canAirDash:
+		transition.emit(self, "dash")
 	
 	# apply gravity
 	player.velocity.y += player.gravity * delta

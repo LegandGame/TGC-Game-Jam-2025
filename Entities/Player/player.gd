@@ -14,6 +14,8 @@ class_name Player extends CharacterBody3D
 @export var walkSpeed : float = 5.0
 @export var sprintSpeed : float = 8.0
 @export var jumpForce : float = 4.5
+@export var dashForce : float = 12.0
+@export var dashDuration : float = 0.8	# seconds
 @export var groundAccel : float = 6.0
 @export var airAccel : float = 2.0
 @export var gravity : float = -9.8
@@ -31,6 +33,7 @@ var invertMouseDirX := false
 
 var isSprinting : bool
 var canDoubleJump : bool = true
+var canAirDash : bool = true
 var outOfCombat : bool = true
 
 
@@ -68,9 +71,6 @@ func _physics_process(delta: float) -> void:
 		cameraSpringArm.spring_length += scroll * delta * 2.0
 		cameraSpringArm.spring_length = clamp(cameraSpringArm.spring_length, 2.0, 10.0)
 	
-	# toggle sprinting
-	if Input.is_action_just_pressed("sprint"):
-		isSprinting = !isSprinting
 	
 	move_and_slide()
 

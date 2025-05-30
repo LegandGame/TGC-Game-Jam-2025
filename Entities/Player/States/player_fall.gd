@@ -23,6 +23,9 @@ func physics_update(delta : float):
 	if Input.is_action_just_pressed("jump") and player.canDoubleJump:
 		transition.emit(self, "doublejump")
 	
+	if Input.is_action_just_pressed("sprint") and player.canAirDash:
+		transition.emit(self, "dash")
+	
 	# air movement
 	var direction := get_input_direction()
 	if direction:

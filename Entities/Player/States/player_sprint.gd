@@ -10,12 +10,18 @@ func update(_delta : float):
 	pass
 
 func physics_update(delta : float):
-	# transition to walking
-	if !player.isSprinting:
-		transition.emit(self, "walk")
 	# transition to falling
 	if !player.is_on_floor():
 		transition.emit(self, "fall")
+	
+	# transition to walking
+	if Input.is_action_just_pressed("sprint"):
+		player.isSprinting = false
+		transition.emit(self, "walk")
+	
+	# transition to jump
+	if Input.is_action_just_pressed("jump"):
+		transition.emit(self, "jump")
 	
 	# movement
 	var direction := get_input_direction()
@@ -27,6 +33,3 @@ func physics_update(delta : float):
 		if player.velocity.length_squared() < 0.1:
 			transition.emit(self, "idle")
 	
-	# transition to jump
-	if Input.is_action_just_pressed("jump"):
-		transition.emit(self, "jump")

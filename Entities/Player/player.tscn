@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://de2sy05ot418v"]
+[gd_scene load_steps=17 format=3 uid="uid://de2sy05ot418v"]
 
 [ext_resource type="Script" uid="uid://cbh06rw2r5lge" path="res://Entities/Player/player.gd" id="1_ffboj"]
 [ext_resource type="Script" uid="uid://dkt6ayks3pwtb" path="res://Common/Hitbox_Hurtbox/hurtbox.gd" id="2_01a4e"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://d13j8t38tj4py" path="res://Entities/Player/States/player_sprint.gd" id="8_lub02"]
 [ext_resource type="Script" uid="uid://do6p1ceto6aln" path="res://Entities/Player/States/player_doublejump.gd" id="9_x1y6q"]
 [ext_resource type="Script" uid="uid://cyaunqyuecy2n" path="res://Entities/Player/seed_tracker.gd" id="10_ap3xn"]
+[ext_resource type="Script" uid="uid://c0c3ledrhr2cx" path="res://Entities/Player/States/player_dash.gd" id="10_iplt1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mv1ah"]
 
@@ -77,6 +78,10 @@ metadata/_custom_type_script = "uid://d13j8t38tj4py"
 [node name="DoubleJump" type="Node" parent="StateMachine"]
 script = ExtResource("9_x1y6q")
 metadata/_custom_type_script = "uid://do6p1ceto6aln"
+
+[node name="Dash" type="Node" parent="StateMachine"]
+script = ExtResource("10_iplt1")
+metadata/_custom_type_script = "uid://c0c3ledrhr2cx"
 
 [node name="SeedTracker" type="Node" parent="."]
 script = ExtResource("10_ap3xn")

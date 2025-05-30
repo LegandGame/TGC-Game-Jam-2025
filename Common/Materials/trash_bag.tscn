@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvcwwb1c15dsa"]
+
+[ext_resource type="PackedScene" uid="uid://fjnplksn5rbn" path="res://Common/Meshes/TrashBag.fbx" id="1_hu0p6"]
+[ext_resource type="Material" uid="uid://doqeh3vx7ke7h" path="res://Common/Materials/TrashBag_ORM.tres" id="2_sstda"]
+
+[node name="TrashBag" instance=ExtResource("1_hu0p6")]
+
+[node name="TrashBag_Lo" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_sstda")

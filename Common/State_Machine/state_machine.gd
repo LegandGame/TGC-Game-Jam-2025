@@ -17,6 +17,10 @@ func _ready() -> void:
 		initialState.enter()
 		curState = initialState
 
+func add_state(newState : State) -> void:
+	states[newState.name.to_upper()] = newState
+	newState.transition.connect(on_state_transition)
+
 func _process(delta: float) -> void:
 	if curState:
 		curState.update(delta)

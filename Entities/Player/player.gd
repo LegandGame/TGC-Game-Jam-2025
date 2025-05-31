@@ -51,6 +51,10 @@ func _ready() -> void:
 	# capture player mouse
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
+func add_state(state : PlayerState) -> void:
+	state.player = self
+	stateMachine.add_state(state)
+
 func _physics_process(delta: float) -> void:
 	# DEBUG LABELS TEMPORARY
 	$DebugStateLabel.text = stateMachine.curState.name

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://0wayw1harj11"]
+
+[ext_resource type="PackedScene" uid="uid://ccvq1qn1tkrvg" path="res://Common/Meshes/Cave.fbx" id="1_4bhwc"]
+
+[node name="Cave" instance=ExtResource("1_4bhwc")]
+
+[node name="Cave_002" parent="." index="0"]
+gi_lightmap_texel_scale = 2.0

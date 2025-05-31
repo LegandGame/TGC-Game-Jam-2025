@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bb2j14h7dd1qo"]
+[gd_scene load_steps=53 format=4 uid="uid://bb2j14h7dd1qo"]
 
 [ext_resource type="Script" uid="uid://dcqy72d7qx5pq" path="res://addons/proton_scatter/src/scatter.gd" id="1_28xfc"]
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_jbwu0"]
@@ -21,10 +21,10 @@
 [ext_resource type="PackedScene" uid="uid://bb6oitdv71g80" path="res://Common/Meshes/Can.fbx" id="11_j1atk"]
 [ext_resource type="Material" uid="uid://diaprec3c05me" path="res://Environment/Materials/WaterMat.tres" id="15_k0at2"]
 [ext_resource type="Texture2D" uid="uid://dwf2yfdjh8syg" path="res://Common/Materials/Textures/CorruptionDecal_AlbedoAlpha.png" id="16_qhhy6"]
+[ext_resource type="PackedScene" uid="uid://0wayw1harj11" path="res://Common/Meshes/cave.tscn" id="17_ro0nm"]
 [ext_resource type="Texture2D" uid="uid://c14rdjpjamomv" path="res://Common/Materials/Textures/CorruptionDecal_normal.png" id="17_xb7ri"]
 [ext_resource type="Texture2D" uid="uid://byckm38knpsni" path="res://Common/Materials/Textures/CorruptionDecal_ORM.png" id="18_kx44x"]
 [ext_resource type="Material" uid="uid://lnx2g8su7k1n" path="res://Environment/Materials/BlockerBlack.tres" id="19_ro0nm"]
-[ext_resource type="PackedScene" uid="uid://ccvq1qn1tkrvg" path="res://Common/Meshes/Cave.fbx" id="19_uesah"]
 [ext_resource type="PackedScene" uid="uid://txw653u8glk6" path="res://Common/Meshes/Bottle_Water.fbx" id="21_bqcvc"]
 [ext_resource type="PackedScene" uid="uid://fjqlo0uoiran" path="res://Common/Meshes/Bottle_Wine.fbx" id="22_j1atk"]
 [ext_resource type="PackedScene" uid="uid://bvcwwb1c15dsa" path="res://Common/Materials/trash_bag.tscn" id="26_xb7ri"]
@@ -86,6 +86,50 @@ stack = Array[ExtResource("3_frrha")]([SubResource("Resource_ro0nm"), SubResourc
 script = ExtResource("10_xb7ri")
 radius = 4.60284
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_6wqw5"]
+_surfaces = [{
+"aabb": AABB(-2.60541, -6.09925, -2.5, 5.21082, 12.1985, 5),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("Cr8mwA4tw8AAACBACr8mwA4tw8AAACDACr8mwA4tw0AAACDACr8mQA4tw8AAACDACr8mwA4tw8AAACDACr8mwA4tw8AAACBACr8mwA4tw0AAACDACr8mwA4tw8AAACDACr8mQA4tw8AAACDACr8mwA4tw0AAACDACr8mwA4tw0AAACBACr8mwA4tw8AAACBACr8mwA4tw8AAACBACr8mwA4tw0AAACBACr8mQA4tw0AAACBACr8mQA4tw0AAACBACr8mwA4tw0AAACBACr8mwA4tw0AAACDACr8mwA4tw8AAACBACr8mQA4tw8AAACBACr8mQA4tw8AAACDACr8mQA4tw0AAACBACr8mQA4tw8AAACBACr8mwA4tw8AAACBACr8mQA4tw8AAACDACr8mQA4tw8AAACBACr8mQA4tw0AAACBACr8mQA4tw8AAACDACr8mQA4tw0AAACDACr8mwA4tw0AAACDACr8mwA4tw0AAACDACr8mQA4tw0AAACDACr8mQA4tw0AAACBACr8mQA4tw0AAACBACr8mQA4tw0AAACDACr8mQA4tw8AAACDAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4dlj8"]
+_surfaces = [{
+"aabb": AABB(-2.82031, -6.2312, -2.5, 5.64063, 12.4624, 5),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("CoA0wP5lx8AAACBACoA0wP5lx8AAACDACoA0wP5lx0AAACDACoA0QP5lx8AAACDACoA0wP5lx8AAACDACoA0wP5lx8AAACBACoA0wP5lx0AAACDACoA0wP5lx8AAACDACoA0QP5lx8AAACDACoA0wP5lx0AAACDACoA0wP5lx0AAACBACoA0wP5lx8AAACBACoA0wP5lx8AAACBACoA0wP5lx0AAACBACoA0QP5lx0AAACBACoA0QP5lx0AAACBACoA0wP5lx0AAACBACoA0wP5lx0AAACDACoA0wP5lx8AAACBACoA0QP5lx8AAACBACoA0QP5lx8AAACDACoA0QP5lx0AAACBACoA0QP5lx8AAACBACoA0wP5lx8AAACBACoA0QP5lx8AAACDACoA0QP5lx8AAACBACoA0QP5lx0AAACBACoA0QP5lx8AAACDACoA0QP5lx0AAACDACoA0wP5lx0AAACDACoA0wP5lx0AAACDACoA0QP5lx0AAACDACoA0QP5lx0AAACBACoA0QP5lx0AAACBACoA0QP5lx0AAACDACoA0QP5lx8AAACDAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5eqnq"]
+_surfaces = [{
+"aabb": AABB(-7.68065, -10.4692, -6.19755, 15.3613, 20.9385, 12.3951),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("48f1wACCJ8FUUsZA48f1wACCJ8FUUsbA48f1wACCJ0FUUsbA48f1QACCJ8FUUsbA48f1wACCJ8FUUsbA48f1wACCJ8FUUsZA48f1wACCJ0FUUsbA48f1wACCJ8FUUsbA48f1QACCJ8FUUsbA48f1wACCJ0FUUsbA48f1wACCJ0FUUsZA48f1wACCJ8FUUsZA48f1wACCJ8FUUsZA48f1wACCJ0FUUsZA48f1QACCJ0FUUsZA48f1QACCJ0FUUsZA48f1wACCJ0FUUsZA48f1wACCJ0FUUsbA48f1wACCJ8FUUsZA48f1QACCJ8FUUsZA48f1QACCJ8FUUsbA48f1QACCJ0FUUsZA48f1QACCJ8FUUsZA48f1wACCJ8FUUsZA48f1QACCJ8FUUsbA48f1QACCJ8FUUsZA48f1QACCJ0FUUsZA48f1QACCJ8FUUsbA48f1QACCJ0FUUsbA48f1wACCJ0FUUsbA48f1wACCJ0FUUsbA48f1QACCJ0FUUsbA48f1QACCJ0FUUsZA48f1QACCJ0FUUsZA48f1QACCJ0FUUsbA48f1QACCJ8FUUsbAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nphhr"]
+_surfaces = [{
+"aabb": AABB(-2.27295, -9.5, -6.19755, 4.5459, 19, 12.3951),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("A3gRwAAAGMFUUsZAA3gRwAAAGMFUUsbAA3gRwAAAGEFUUsbAA3gRQAAAGMFUUsbAA3gRwAAAGMFUUsbAA3gRwAAAGMFUUsZAA3gRwAAAGEFUUsbAA3gRwAAAGMFUUsbAA3gRQAAAGMFUUsbAA3gRwAAAGEFUUsbAA3gRwAAAGEFUUsZAA3gRwAAAGMFUUsZAA3gRwAAAGMFUUsZAA3gRwAAAGEFUUsZAA3gRQAAAGEFUUsZAA3gRQAAAGEFUUsZAA3gRwAAAGEFUUsZAA3gRwAAAGEFUUsbAA3gRwAAAGMFUUsZAA3gRQAAAGMFUUsZAA3gRQAAAGMFUUsbAA3gRQAAAGEFUUsZAA3gRQAAAGMFUUsZAA3gRwAAAGMFUUsZAA3gRQAAAGMFUUsbAA3gRQAAAGMFUUsZAA3gRQAAAGEFUUsZAA3gRQAAAGMFUUsbAA3gRQAAAGEFUUsbAA3gRwAAAGEFUUsbAA3gRwAAAGEFUUsbAA3gRQAAAGEFUUsbAA3gRQAAAGEFUUsZAA3gRQAAAGEFUUsZAA3gRQAAAGEFUUsbAA3gRQAAAGMFUUsbAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_vwcvh"]
 material = ExtResource("15_k0at2")
 size = Vector2(1000, 1000)
@@ -112,6 +156,10 @@ lightmap_size_hint = Vector2i(620, 413)
 material = ExtResource("19_ro0nm")
 add_uv2 = true
 size = Vector3(73.34, 4.075, 50.04)
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_buykt"]
+auto_exposure_min_exposure_value = -3.0
+auto_exposure_max_exposure_value = 4.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8w78v"]
 size = Vector3(22.5297, 1, 49.8643)
@@ -272,19 +320,38 @@ size = Vector3(30, 1, 8)
 transform = Transform3D(-0.436629, 0, -0.899642, 0, 1, 0, 0.899642, 0, -0.436629, -257.921, 5.67504, -27.0709)
 
 [node name="House_CSG_17" type="CSGBox3D" parent="WorldGeometry/CaveEntrance"]
+use_collision = true
 size = Vector3(5.21082, 12.1985, 5)
+
+[node name="CSGBakedMeshInstance3D2" type="MeshInstance3D" parent="WorldGeometry/CaveEntrance"]
+mesh = SubResource("ArrayMesh_6wqw5")
 
 [node name="House_CSG_18" type="CSGBox3D" parent="WorldGeometry/CaveEntrance"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4164, 0.11707, -0.234161)
+use_collision = true
 size = Vector3(5.64063, 12.4624, 5)
 
+[node name="CSGBakedMeshInstance3D3" type="MeshInstance3D" parent="WorldGeometry/CaveEntrance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4164, 0.11707, -0.234161)
+mesh = SubResource("ArrayMesh_4dlj8")
+
 [node name="House_CSG_19" type="CSGBox3D" parent="WorldGeometry/CaveEntrance"]
-transform = Transform3D(0.00513927, 0.997426, -0.0715052, -0.997427, -4.04228e-08, -0.0716888, -0.0715044, 0.0716893, 0.99486, -4.87869, 9.68962, 1.06067)
-size = Vector3(15.3613, 19, 12.3951)
+transform = Transform3D(0.00513927, 0.997426, -0.0715054, -0.997427, -4.04228e-08, -0.0716888, -0.0715044, 0.0716893, 0.99486, -5.84544, 9.68962, 0.99118)
+use_collision = true
+size = Vector3(15.3613, 20.9385, 12.3951)
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="WorldGeometry/CaveEntrance"]
+transform = Transform3D(0.00513927, 0.997426, -0.0715054, -0.997427, -4.04228e-08, -0.0716888, -0.0715044, 0.0716893, 0.99486, -5.84544, 9.68962, 0.99118)
+mesh = SubResource("ArrayMesh_5eqnq")
 
 [node name="House_CSG_20" type="CSGBox3D" parent="WorldGeometry/CaveEntrance"]
-transform = Transform3D(0.00513927, 0.997426, -0.0715052, -0.997427, -4.04228e-08, -0.0716888, -0.0715044, 0.0716893, 0.99486, -4.8509, -7.53911, 0.673996)
+transform = Transform3D(0.00513927, 0.997426, -0.0715052, -0.997427, -4.04228e-08, -0.0716888, -0.0715044, 0.0716893, 0.99486, -5.83598, -7.53911, 1.41736)
+use_collision = true
 size = Vector3(4.5459, 19, 12.3951)
+
+[node name="CSGBakedMeshInstance3D4" type="MeshInstance3D" parent="WorldGeometry/CaveEntrance"]
+transform = Transform3D(0.00513927, 0.997426, -0.0715052, -0.997427, -4.04228e-08, -0.0716888, -0.0715044, 0.0716893, 0.99486, -5.83598, -7.53911, 1.41736)
+mesh = SubResource("ArrayMesh_nphhr")
 
 [node name="Water" type="Node3D" parent="WorldGeometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 288.981, -27.6852, 267.854)
@@ -494,10 +561,8 @@ transform = Transform3D(0.882627, -0.438494, -0.169385, 0.426793, 0.898556, -0.1
 use_collision = true
 height = 18.5475
 
-[node name="Cave" parent="WorldGeometry" instance=ExtResource("19_uesah")]
-transform = Transform3D(1, 0, 1.73205, 0, 2, 0, -1.73205, 0, 1, -256.066, 0.335709, -32.4003)
-
 [node name="LightBlockers" type="Node3D" parent="WorldGeometry"]
+visible = false
 
 [node name="LightBlocker2" type="MeshInstance3D" parent="WorldGeometry/LightBlockers"]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -291.087, 10.1905, -68.0113)
@@ -509,18 +574,23 @@ transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -327.09, -
 mesh = SubResource("BoxMesh_4dlj8")
 skeleton = NodePath("../../../Player")
 
-[node name="Player" parent="." instance=ExtResource("1_jbwu0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.20153, -16.0032)
-jumpForce = 10.0
-groundAccel = 8.0
-airAccel = 8.0
-gravity = -25.0
-fov = 80.0
+[node name="Cave2" parent="WorldGeometry" instance=ExtResource("17_ro0nm")]
+transform = Transform3D(1, 0, 1.73205, 0, 2, 0, -1.73205, 0, 1, -256.066, 0.335709, -32.4003)
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00327778, 0.0100541, -0.0043087)
+[node name="SpotLight3D" type="SpotLight3D" parent="WorldGeometry/Cave2"]
+transform = Transform3D(0.000277765, -0.499998, -0.00150797, 0.435737, -0.000497526, 0.245221, -0.245221, -0.00145039, 0.435734, 12.2585, -4.57028, -58.0595)
+light_intensity_lumens = 50000.0
+light_bake_mode = 1
+shadow_enabled = true
+spot_range = 16.1888
+
+[node name="LightmapGI" type="LightmapGI" parent="WorldGeometry/Cave2"]
+transform = Transform3D(0.25, 0, -0.433013, 0, 0.5, 0, 0.433013, 0, 0.25, 49.9894, -0.162827, 118.98)
 quality = 3
 supersampling = true
+interior = true
+texel_scale = 2.0
+camera_attributes = SubResource("CameraAttributesPhysical_buykt")
 generate_probes_subdiv = 4
 light_data = ExtResource("2_sqxud")
 
@@ -558,7 +628,7 @@ transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574
 transform = Transform3D(-0.990575, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990575, -437.275, -26.7608, -188.617)
 
 [node name="SeedPot3" parent="CorruptedZone01" instance=ExtResource("7_2we3s")]
-transform = Transform3D(-0.990575, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990575, -466.711, -26.2327, -265.685)
+transform = Transform3D(-0.990575, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990575, -467.211, -25.5293, -264.364)
 
 [node name="TrashProps" type="Node3D" parent="CorruptedZone01"]
 
@@ -675,12 +745,13 @@ transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574
 visible = false
 max_distance = 0.5
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lighting"]
-transform = Transform3D(0.454113, 0.379346, -0.80615, 0.871473, -0.000995338, 0.490442, 0.185245, -0.925255, -0.331042, 356.423, -8.80485, 63.4683)
-light_intensity_lumens = 50000.0
-light_bake_mode = 1
-shadow_enabled = true
-spot_range = 16.1888
+[node name="Player" parent="." instance=ExtResource("1_jbwu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 257.833, -18.1912, 266.703)
+jumpForce = 10.0
+groundAccel = 8.0
+airAccel = 8.0
+gravity = -25.0
+fov = 80.0
 
 [node name="Boss01" parent="." instance=ExtResource("27_kx44x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 204.368, -20.0702, 225.053)

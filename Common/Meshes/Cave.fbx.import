@@ -33,14 +33,10 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
-"meshes": {
-"Cube_004": {
-"generate/lightmap_uv": 1,
-"generate/lods": 0,
-"generate/shadow_meshes": 0,
-"lods/normal_merge_angle": 60.0,
-"save_to_file/enabled": false,
-"save_to_file/path": ""
+"nodes": {
+"PATH:Cave_002": {
+"generate/physics": true,
+"physics/shape_type": 2
 }
 }
 }

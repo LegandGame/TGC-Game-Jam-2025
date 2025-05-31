@@ -2,9 +2,8 @@ class_name StateMachine extends Node
 
 var states : Dictionary = {}
 var curState : State
+@export var animator : AnimationPlayer
 @export var initialState : State
-
-# TODO: will probably handle animation switching in here that way it's generic
 
 func _ready() -> void:
 	for child in get_children():
@@ -16,6 +15,7 @@ func _ready() -> void:
 		await get_parent().ready
 		initialState.enter()
 		curState = initialState
+		play_state_anim(curState)
 
 func add_state(newState : State) -> void:
 	states[newState.name.to_upper()] = newState
@@ -41,3 +41,9 @@ func on_state_transition(calling_state : State, new_state_name : String):
 		curState.exit()
 	new_state.enter()
 	curState = new_state
+	play_state_anim(curState)
+
+func play_state_anim(state : State) -> void:
+	if !animator or !animator.has_animation(state.name.to_upper()):
+		return
+	animator.play(state.name)

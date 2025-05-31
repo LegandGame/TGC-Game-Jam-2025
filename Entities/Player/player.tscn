@@ -9,14 +9,13 @@
 [ext_resource type="Script" uid="uid://e0tghmpdna2a" path="res://Common/health_component.gd" id="6_4wf4l"]
 [ext_resource type="Script" uid="uid://daiwhrl40mpaq" path="res://Entities/Player/States/player_fall.gd" id="7_7a1se"]
 [ext_resource type="Script" uid="uid://d13j8t38tj4py" path="res://Entities/Player/States/player_sprint.gd" id="8_lub02"]
+[ext_resource type="Script" uid="uid://c0c3ledrhr2cx" path="res://Entities/Player/States/player_dash.gd" id="9_iplt1"]
 [ext_resource type="Script" uid="uid://cyaunqyuecy2n" path="res://Entities/Player/seed_tracker.gd" id="10_ap3xn"]
 [ext_resource type="PackedScene" uid="uid://u314jes66jvq" path="res://Common/Meshes/Moth.fbx" id="11_ap3xn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mv1ah"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7a1se"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_mv1ah"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mv1ah"]
 
@@ -36,10 +35,6 @@ metadata/_custom_type_script = "uid://dkt6ayks3pwtb"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox"]
 shape = SubResource("CapsuleShape3D_7a1se")
-
-[node name="PlayerMesh" type="MeshInstance3D" parent="."]
-visible = false
-mesh = SubResource("CapsuleMesh_mv1ah")
 
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0.5, 0)
@@ -74,6 +69,10 @@ metadata/_custom_type_script = "uid://daiwhrl40mpaq"
 [node name="Sprint" type="Node" parent="StateMachine"]
 script = ExtResource("8_lub02")
 metadata/_custom_type_script = "uid://d13j8t38tj4py"
+
+[node name="Dash" type="Node" parent="StateMachine"]
+script = ExtResource("9_iplt1")
+metadata/_custom_type_script = "uid://c0c3ledrhr2cx"
 
 [node name="SeedTracker" type="Node" parent="."]
 script = ExtResource("10_ap3xn")

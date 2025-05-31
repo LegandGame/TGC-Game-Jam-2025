@@ -3,7 +3,8 @@ class_name PlayerDash extends PlayerState
 func enter():
 	player.canAirDash = false
 	#actually perform the dash
-	var dashDir = player.transform.basis.z.normalized()
+	#var dashDir = -player.transform.basis.z.normalized()
+	var dashDir = player.lastMovementDir
 	player.velocity = dashDir * player.dashForce
 	player.velocity.y = 0
 

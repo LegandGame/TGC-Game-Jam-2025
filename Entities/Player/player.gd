@@ -9,6 +9,7 @@ class_name Player extends CharacterBody3D
 @onready var seedTracker := $SeedTracker
 @onready var health : HealthComponent = $SeedTracker/Health
 @onready var combatTimer : Timer = $CombatTimer
+@onready var playerMesh := $Moth
 
 @export_category("Movement")
 @export var walkSpeed : float = 5.0
@@ -20,6 +21,7 @@ class_name Player extends CharacterBody3D
 @export var airAccel : float = 2.0
 @export var gravity : float = -9.8
 @export var terminalVelo : float = 30.0
+@export var rotationSpeed : float = 12.0
 
 @export_category("Camera")
 @export var mouseSensitivity := 0.25
@@ -35,6 +37,7 @@ var isSprinting : bool
 var canDoubleJump : bool = true
 var canAirDash : bool = true
 var outOfCombat : bool = true
+var lastMovementDir := Vector3.BACK
 
 
 func _ready() -> void:
@@ -75,6 +78,17 @@ func _physics_process(delta: float) -> void:
 		cameraSpringArm.spring_length += scroll * delta * 2.0
 		cameraSpringArm.spring_length = clamp(cameraSpringArm.spring_length, 2.0, 10.0)
 	
+	# rotate character
+	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+	var direction := (cameraPivot.transform.basis * Vector3(input_dir.x, 0.0, input_dir.y))
+	direction.y = 0.0
+	direction = direction.normalized()
+	if direction.length_squared() > 0.2:
+		lastMovementDir = direction
+	var targetAngle := Vector3.BACK.signed_angle_to(lastMovementDir, Vector3.UP)
+	playerMesh.global_rotation.y = lerp_angle(
+		playerMesh.rotation.y, targetAngle, rotationSpeed * delta
+		)
 	
 	move_and_slide()
 

@@ -134,6 +134,6 @@ func respawn() -> void:
 			nearestCheckpoint = c
 	#respawn
 	if nearestCheckpoint:
-		position = nearestCheckpoint.position + buffer
+		position = nearestCheckpoint.global_position + buffer
 	else:
 		position = Vector3(0.0, 2.5, 0.0)

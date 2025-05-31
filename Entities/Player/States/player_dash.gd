@@ -19,9 +19,12 @@ func physics_update(delta : float):
 		transition.emit(self, "idle")
 	
 	# air movement
-	var direction := get_input_direction()
-	if direction:
-		lerp_player_velocity(delta, direction, player.walkSpeed, player.airAccel)
+	lerp_player_velocity(delta, player.lastMovementDir, player.walkSpeed, player.airAccel)
+	#var direction := get_input_direction()
+	#if direction:
+		#lerp_player_velocity(delta, direction, player.walkSpeed, player.airAccel)
+	#else:
+		#lerp_player_velocity(delta, direction, 0.0, player.airAccel)
 	
 	await get_tree().create_timer(player.dashDuration).timeout
 	transition.emit(self, "fall")

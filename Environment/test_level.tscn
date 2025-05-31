@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://da4nccnci7wmy"]
+[gd_scene load_steps=16 format=3 uid="uid://da4nccnci7wmy"]
 
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_bst0x"]
 [ext_resource type="PackedScene" uid="uid://cprdlxpgmmxr1" path="res://Environment/Seed/seed.tscn" id="3_8uj1e"]
 [ext_resource type="PackedScene" uid="uid://b1gpr016q5nlc" path="res://Environment/Trash_Zone/Trash_Zone_Handler/trash_zone_handler.tscn" id="4_8ks4w"]
 [ext_resource type="PackedScene" uid="uid://q4nrk4l1g0ur" path="res://Environment/Seed_Pot/seed_pot.tscn" id="4_kh4g5"]
+[ext_resource type="PackedScene" uid="uid://bqshii1otgs3" path="res://Entities/Boss_01/boss_01.tscn" id="5_8ks4w"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yijdk"]
 sky_top_color = Color(0.419318, 0.460197, 0.85151, 1)
@@ -114,5 +115,14 @@ mesh = SubResource("BoxMesh_vhre0")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="TrashZoneHandler/MeshHolder" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29106, 0, 0)
 mesh = SubResource("SphereMesh_chco4")
+
+[node name="Boss01" parent="." instance=ExtResource("5_8ks4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87014, 1.70856, -13.481)
+
+[node name="Label3D" type="Label3D" parent="Boss01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60285, 0)
+billboard = 1
+text = "I give DoubleJump
+press [E] while near"
 
 [editable path="TrashZoneHandler"]

@@ -129,8 +129,9 @@ func respawn() -> void:
 	var nearestCheckpoint = null
 	var nearestCheckpointDistance = INF
 	for c in get_tree().get_nodes_in_group("checkpoint"):
-		if position.distance_squared_to(c.position) < nearestCheckpointDistance:
-			nearestCheckpointDistance = c.position
+		var distance = self.global_position.distance_squared_to(c.global_position)
+		if distance < nearestCheckpointDistance:
+			nearestCheckpointDistance = distance
 			nearestCheckpoint = c
 	#respawn
 	if nearestCheckpoint:

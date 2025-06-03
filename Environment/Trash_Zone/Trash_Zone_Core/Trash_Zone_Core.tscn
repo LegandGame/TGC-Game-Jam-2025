@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsvbdy7ucqoka"]
+
+[ext_resource type="Script" uid="uid://dwfsh6s2qsqnh" path="res://Environment/Trash_Zone/Trash_Zone_Core/trash_zone_core.gd" id="1_3odm7"]
+[ext_resource type="Script" uid="uid://e0tghmpdna2a" path="res://Common/health_component.gd" id="2_m7o6w"]
+[ext_resource type="Script" uid="uid://cpgyi002n12n8" path="res://Common/interactable.gd" id="2_sxqln"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3odm7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_sxqln"]
+
+[node name="TrashZoneCore" type="Node3D"]
+script = ExtResource("1_3odm7")
+
+[node name="InteractArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_sxqln")
+metadata/_custom_type_script = "uid://cpgyi002n12n8"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
+shape = SubResource("SphereShape3D_3odm7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_sxqln")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("2_m7o6w")
+maxHealth = 1.0
+metadata/_custom_type_script = "uid://e0tghmpdna2a"

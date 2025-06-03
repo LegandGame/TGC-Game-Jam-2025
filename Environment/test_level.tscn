@@ -1,10 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://da4nccnci7wmy"]
+[gd_scene load_steps=19 format=3 uid="uid://da4nccnci7wmy"]
 
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_bst0x"]
 [ext_resource type="PackedScene" uid="uid://cprdlxpgmmxr1" path="res://Environment/Seed/seed.tscn" id="3_8uj1e"]
 [ext_resource type="PackedScene" uid="uid://b1gpr016q5nlc" path="res://Environment/Trash_Zone/Trash_Zone_Handler/trash_zone_handler.tscn" id="4_8ks4w"]
 [ext_resource type="PackedScene" uid="uid://q4nrk4l1g0ur" path="res://Environment/Seed_Pot/seed_pot.tscn" id="4_kh4g5"]
 [ext_resource type="PackedScene" uid="uid://bqshii1otgs3" path="res://Entities/Boss_01/boss_01.tscn" id="5_8ks4w"]
+[ext_resource type="PackedScene" uid="uid://bvx2j0q7tg6cu" path="res://Entities/Boss_02/Boss_02.tscn" id="6_vhre0"]
+[ext_resource type="PackedScene" uid="uid://ur4ttq22kqcs" path="res://Entities/Boss_03/Boss_03.tscn" id="7_l0idg"]
+[ext_resource type="PackedScene" uid="uid://bb2j14h7dd1qo" path="res://Environment/level_01.tscn" id="8_vs8uc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yijdk"]
 sky_top_color = Color(0.419318, 0.460197, 0.85151, 1)
@@ -123,6 +126,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87014, 1.70856, -13.481)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60285, 0)
 billboard = 1
 text = "I give DoubleJump
+press [E] while near"
+
+[node name="Boss02" parent="." instance=ExtResource("6_vhre0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.56796, -12.3877)
+
+[node name="Label3D" type="Label3D" parent="Boss02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60285, 0)
+billboard = 1
+text = "I give Dash
+press [E] while near"
+
+[node name="Boss03" parent="." instance=ExtResource("7_l0idg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.275, 1.5723, -13.4422)
+endScene = ExtResource("8_vs8uc")
+
+[node name="Label3D" type="Label3D" parent="Boss03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60285, 0)
+billboard = 1
+text = "I change the scene/end the game
 press [E] while near"
 
 [editable path="TrashZoneHandler"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://bb2j14h7dd1qo"]
+[gd_scene load_steps=55 format=4 uid="uid://bb2j14h7dd1qo"]
 
 [ext_resource type="Script" uid="uid://dcqy72d7qx5pq" path="res://addons/proton_scatter/src/scatter.gd" id="1_28xfc"]
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_jbwu0"]
@@ -29,6 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://fjqlo0uoiran" path="res://Common/Meshes/Bottle_Wine.fbx" id="22_j1atk"]
 [ext_resource type="PackedScene" uid="uid://bvcwwb1c15dsa" path="res://Common/Materials/trash_bag.tscn" id="26_xb7ri"]
 [ext_resource type="PackedScene" uid="uid://bqshii1otgs3" path="res://Entities/Boss_01/boss_01.tscn" id="27_kx44x"]
+[ext_resource type="PackedScene" uid="uid://bvx2j0q7tg6cu" path="res://Entities/Boss_02/Boss_02.tscn" id="30_4dlj8"]
+[ext_resource type="PackedScene" uid="uid://ur4ttq22kqcs" path="res://Entities/Boss_03/Boss_03.tscn" id="31_5eqnq"]
 
 [sub_resource type="Resource" id="Resource_ro0nm"]
 script = ExtResource("4_8mltw")
@@ -395,7 +397,7 @@ transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 
 size = Vector3(2, 2, 2)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="WorldGeometry/Ramps"]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -62.741, 39.7392, -358.249)
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -62.741, 38.1386, -358.249)
 use_collision = true
 size = Vector3(4, 0.5, 10.6592)
 
@@ -746,7 +748,7 @@ visible = false
 max_distance = 0.5
 
 [node name="Player" parent="." instance=ExtResource("1_jbwu0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 257.833, -18.1912, 266.703)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 229.289, 8.73419, -76.4325)
 jumpForce = 10.0
 groundAccel = 8.0
 airAccel = 8.0
@@ -754,12 +756,31 @@ gravity = -25.0
 fov = 80.0
 
 [node name="Boss01" parent="." instance=ExtResource("27_kx44x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 204.368, -20.0702, 225.053)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.899, -19.9204, 160.887)
 
 [node name="Label3D" type="Label3D" parent="Boss01"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60285, 0)
 billboard = 1
 text = "I give DoubleJump
+press [E] while near"
+
+[node name="Boss02" parent="." instance=ExtResource("30_4dlj8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -137.462, 123.419, -293.812)
+
+[node name="Label3D" type="Label3D" parent="Boss02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60285, 0)
+billboard = 1
+text = "I give Dash
+press [E] while near"
+
+[node name="Boss03" parent="." instance=ExtResource("31_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -344.639, -10.9003, -112.21)
+endScene = null
+
+[node name="Label3D" type="Label3D" parent="Boss03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60285, 0)
+billboard = 1
+text = "I change the scene/end the game
 press [E] while near"
 
 [editable path="CorruptedZone01/TrashZoneHandler"]

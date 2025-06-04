@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://bb2j14h7dd1qo"]
+[gd_scene load_steps=57 format=4 uid="uid://bb2j14h7dd1qo"]
 
 [ext_resource type="Script" uid="uid://dcqy72d7qx5pq" path="res://addons/proton_scatter/src/scatter.gd" id="1_28xfc"]
 [ext_resource type="PackedScene" uid="uid://de2sy05ot418v" path="res://Entities/Player/player.tscn" id="1_jbwu0"]
@@ -25,14 +25,16 @@
 [ext_resource type="Texture2D" uid="uid://c14rdjpjamomv" path="res://Common/Materials/Textures/CorruptionDecal_normal.png" id="17_xb7ri"]
 [ext_resource type="Texture2D" uid="uid://byckm38knpsni" path="res://Common/Materials/Textures/CorruptionDecal_ORM.png" id="18_kx44x"]
 [ext_resource type="Material" uid="uid://lnx2g8su7k1n" path="res://Environment/Materials/BlockerBlack.tres" id="19_ro0nm"]
+[ext_resource type="PackedScene" uid="uid://dsvbdy7ucqoka" path="res://Environment/Trash_Zone/Trash_Zone_Core/Trash_Zone_Core.tscn" id="20_5eqnq"]
 [ext_resource type="PackedScene" uid="uid://txw653u8glk6" path="res://Common/Meshes/Bottle_Water.fbx" id="21_bqcvc"]
 [ext_resource type="PackedScene" uid="uid://fjqlo0uoiran" path="res://Common/Meshes/Bottle_Wine.fbx" id="22_j1atk"]
 [ext_resource type="PackedScene" uid="uid://bvcwwb1c15dsa" path="res://Common/Materials/trash_bag.tscn" id="26_xb7ri"]
 [ext_resource type="PackedScene" uid="uid://bqshii1otgs3" path="res://Entities/Boss_01/boss_01.tscn" id="27_kx44x"]
+[ext_resource type="PackedScene" uid="uid://cjanlvilmqhyb" path="res://Common/Meshes/tree_01.tscn" id="29_nphhr"]
 [ext_resource type="PackedScene" uid="uid://bvx2j0q7tg6cu" path="res://Entities/Boss_02/Boss_02.tscn" id="30_4dlj8"]
 [ext_resource type="PackedScene" uid="uid://ur4ttq22kqcs" path="res://Entities/Boss_03/Boss_03.tscn" id="31_5eqnq"]
 
-[sub_resource type="Resource" id="Resource_4dlj8"]
+[sub_resource type="Resource" id="Resource_buykt"]
 script = ExtResource("4_8mltw")
 amount = 75
 enabled = true
@@ -41,7 +43,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 1
 
-[sub_resource type="Resource" id="Resource_5eqnq"]
+[sub_resource type="Resource" id="Resource_pw61q"]
 script = ExtResource("5_imund")
 position = Vector3(0.15, 0.15, 0.15)
 rotation = Vector3(20, 360, 20)
@@ -52,7 +54,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_nphhr"]
+[sub_resource type="Resource" id="Resource_l4em3"]
 script = ExtResource("6_j1atk")
 iterations = 3
 offset_step = 0.2
@@ -64,7 +66,7 @@ custom_seed = 0
 restrict_height = true
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_buykt"]
+[sub_resource type="Resource" id="Resource_gl6ne"]
 script = ExtResource("7_k0at2")
 ray_direction = Vector3(0, -1, 0)
 ray_length = 5.0
@@ -80,9 +82,9 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_pw61q"]
+[sub_resource type="Resource" id="Resource_5woh1"]
 script = ExtResource("2_3fhqe")
-stack = Array[ExtResource("3_frrha")]([SubResource("Resource_4dlj8"), SubResource("Resource_5eqnq"), SubResource("Resource_nphhr"), SubResource("Resource_buykt")])
+stack = Array[ExtResource("3_frrha")]([SubResource("Resource_buykt"), SubResource("Resource_pw61q"), SubResource("Resource_l4em3"), SubResource("Resource_gl6ne")])
 
 [sub_resource type="Resource" id="Resource_g8bsm"]
 script = ExtResource("10_xb7ri")
@@ -209,7 +211,7 @@ metadata/_edit_lock_ = true
 [node name="ProtonScatter" type="Node3D" parent="WorldGeometry/ScatterMeshes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.6338, 2.61362, -28.8726)
 script = ExtResource("1_28xfc")
-modifier_stack = SubResource("Resource_pw61q")
+modifier_stack = SubResource("Resource_5woh1")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 metadata/_custom_type_script = "uid://dcqy72d7qx5pq"
@@ -614,6 +616,68 @@ shape = SubResource("BoxShape3D_8w78v")
 transform = Transform3D(14.39, 0, 0, 0, 14.39, 0, 0, 0, 14.39, 33.0084, 0, -19.5601)
 shape = SubResource("SphereShape3D_v2tia")
 
+[node name="Decals" type="Node3D" parent="CorruptedZone01/TrashZoneHandler"]
+transform = Transform3D(-0.990574, 0, 0.136978, 0, 1, 0, -0.136978, 0, -0.990574, -9.48446, -1.238, -2.38419e-06)
+
+[node name="Decal" type="Decal" parent="CorruptedZone01/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -30.3415, 0.502728, 12.5321)
+size = Vector3(21.1808, 2, 10.4518)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal2" type="Decal" parent="CorruptedZone01/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -42.5616, 1.09021, 13.0433)
+size = Vector3(21.1808, 2, 10.769)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal3" type="Decal" parent="CorruptedZone01/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -57.9282, 1.26518, 9.43267)
+size = Vector3(21.1808, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal4" type="Decal" parent="CorruptedZone01/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -47.9902, -0.530844, 4.69992)
+size = Vector3(21.1808, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal5" type="Decal" parent="CorruptedZone01/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -60.2308, -0.530844, -2.673)
+size = Vector3(21.1808, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal6" type="Decal" parent="CorruptedZone01/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -70.9632, -0.193219, 1.80282)
+size = Vector3(24.272, 5.04871, 25.3403)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal7" type="Decal" parent="CorruptedZone01/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -74.6252, -0.530844, -5.27501)
+size = Vector3(21.1808, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal8" type="Decal" parent="CorruptedZone01/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -89.8278, -1.05035, 0.762417)
+size = Vector3(30.6303, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="TrashZoneCore" parent="CorruptedZone01/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.6662, -2.38419e-07, 7.42707)
+
 [node name="Seed" parent="CorruptedZone01" instance=ExtResource("6_v2tia")]
 transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574, -79.6924, 0.807236, 3.1758)
 
@@ -670,64 +734,6 @@ transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574
 [node name="TrashBag" parent="CorruptedZone01/TrashProps" instance=ExtResource("26_xb7ri")]
 transform = Transform3D(0.937057, 0, -0.349177, 0, 1, 0, 0.349177, 0, 0.937057, -36.4427, 0.613258, 5.3658)
 
-[node name="Decals" type="Node3D" parent="CorruptedZone01"]
-
-[node name="Decal" type="Decal" parent="CorruptedZone01/Decals"]
-transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -30.3415, 0.502728, 12.5321)
-size = Vector3(21.1808, 2, 10.4518)
-texture_albedo = ExtResource("16_qhhy6")
-texture_normal = ExtResource("17_xb7ri")
-texture_orm = ExtResource("18_kx44x")
-
-[node name="Decal2" type="Decal" parent="CorruptedZone01/Decals"]
-transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -42.5616, 1.09021, 13.0433)
-size = Vector3(21.1808, 2, 10.769)
-texture_albedo = ExtResource("16_qhhy6")
-texture_normal = ExtResource("17_xb7ri")
-texture_orm = ExtResource("18_kx44x")
-
-[node name="Decal3" type="Decal" parent="CorruptedZone01/Decals"]
-transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -57.9282, 1.26518, 9.43267)
-size = Vector3(21.1808, 5.04871, 17.7663)
-texture_albedo = ExtResource("16_qhhy6")
-texture_normal = ExtResource("17_xb7ri")
-texture_orm = ExtResource("18_kx44x")
-
-[node name="Decal4" type="Decal" parent="CorruptedZone01/Decals"]
-transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -47.9902, -0.530844, 4.69992)
-size = Vector3(21.1808, 5.04871, 17.7663)
-texture_albedo = ExtResource("16_qhhy6")
-texture_normal = ExtResource("17_xb7ri")
-texture_orm = ExtResource("18_kx44x")
-
-[node name="Decal5" type="Decal" parent="CorruptedZone01/Decals"]
-transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -60.2308, -0.530844, -2.673)
-size = Vector3(21.1808, 5.04871, 17.7663)
-texture_albedo = ExtResource("16_qhhy6")
-texture_normal = ExtResource("17_xb7ri")
-texture_orm = ExtResource("18_kx44x")
-
-[node name="Decal6" type="Decal" parent="CorruptedZone01/Decals"]
-transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -70.9632, -0.193219, 1.80282)
-size = Vector3(24.272, 5.04871, 25.3403)
-texture_albedo = ExtResource("16_qhhy6")
-texture_normal = ExtResource("17_xb7ri")
-texture_orm = ExtResource("18_kx44x")
-
-[node name="Decal7" type="Decal" parent="CorruptedZone01/Decals"]
-transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -74.6252, -0.530844, -5.27501)
-size = Vector3(21.1808, 5.04871, 17.7663)
-texture_albedo = ExtResource("16_qhhy6")
-texture_normal = ExtResource("17_xb7ri")
-texture_orm = ExtResource("18_kx44x")
-
-[node name="Decal8" type="Decal" parent="CorruptedZone01/Decals"]
-transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -89.8278, -1.05035, 0.762417)
-size = Vector3(30.6303, 5.04871, 17.7663)
-texture_albedo = ExtResource("16_qhhy6")
-texture_normal = ExtResource("17_xb7ri")
-texture_orm = ExtResource("18_kx44x")
-
 [node name="Lighting" type="Node3D" parent="."]
 transform = Transform3D(-0.990574, 0, 0.136978, 0, 1, 0, -0.136978, 0, -0.990574, 0, 0, 0)
 
@@ -747,8 +753,149 @@ transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574
 visible = false
 max_distance = 0.5
 
+[node name="SwampTrees" type="Node3D" parent="."]
+transform = Transform3D(-0.865569, 0.000210622, 0.246557, -0.00157076, 0.899977, -0.00628313, -0.246552, -0.00647307, -0.865546, 399.2, -26.528, 237.397)
+
+[node name="tree_01_tscn" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.0686, -0.00193921, -0.304386, 0.000260027, 1.11108, -0.00799145, 0.304392, -0.00775695, -1.06858, -3.90683, -0.620308, -9.33334)
+
+[node name="tree_01_tscn2" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(1, 0, 0, 0, 1, -4.65661e-10, 5.96046e-08, 4.65661e-10, 1, -3.05176e-05, 0, 1.52588e-05)
+
+[node name="tree_01_tscn3" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.0686, -0.00193921, -0.304386, 0.000260027, 1.11108, -0.00799145, 0.304392, -0.00775695, -1.06858, -14.4513, -0.807035, -5.80301)
+
+[node name="tree_01_tscn4" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.06844, 0.00562345, -0.304903, 3.43649e-06, 1.11092, 0.0204772, 0.304954, 0.0196899, -1.06826, -29.51, -0.263411, -42.0009)
+
+[node name="tree_01_tscn5" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(0.171939, -0.00630822, -1.81407, 0.0146615, 1.82215, -0.00494668, 1.81402, -0.0141292, 0.171984, -52.2353, -1.35189, -49.2421)
+
+[node name="tree_01_tscn6" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.06737, -0.00938522, -0.30855, 0.00166006, 1.11041, -0.0395181, 0.308688, -0.0384233, -1.06668, -56.0934, -0.225142, -73.8634)
+
+[node name="tree_01_tscn7" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.06904, 0.00253124, -0.302856, 0.00380135, 1.1111, -0.00413177, 0.302842, -0.00501145, -1.06903, -29.8702, -0.338297, -59.4859)
+
+[node name="tree_01_tscn8" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.07367, 0.0399645, -0.283185, 0.0408342, 1.11036, 0.00187975, 0.283061, -0.00859087, -1.07442, 17.6018, -1.02999, -61.3041)
+
+[node name="tree_01_tscn9" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.0686, 0.00170162, -0.304389, 0.00383607, 1.11108, -0.00725583, 0.30437, -0.00802913, -1.06858, 2.7244, -0.343212, -50.1379)
+
+[node name="tree_01_tscn10" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.0686, -0.00193921, -0.304386, 0.000260027, 1.11108, -0.00799145, 0.304392, -0.00775695, -1.06858, 8.20215, -0.597425, -54.684)
+
+[node name="tree_01_tscn11" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.06906, -0.00732238, -0.302711, 2.70211e-05, 1.11078, -0.0269645, 0.3028, -0.0259513, -1.06874, -1.48483, -0.419786, -60.1249)
+
+[node name="tree_01_tscn12" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.09568, 0.00226001, -0.184542, 0.0035688, 1.11108, -0.00758199, 0.184521, -0.0080694, -1.09565, -36.8266, -0.599663, -82.4639)
+
+[node name="tree_01_tscn13" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.111, -0.00273778, -0.0154761, -0.00261455, 1.11107, -0.00885933, 0.0154974, -0.00882203, -1.11097, 7.1644, -1.5958, -216.834)
+
+[node name="tree_01_tscn14" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08511, -0.0019276, -0.238976, -0.000212902, 1.11108, -0.00799539, 0.238984, -0.00776247, -1.08508, 49.3771, -1.54145, -218.658)
+
+[node name="tree_01_tscn15" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08511, -0.00193914, -0.238979, -0.000225328, 1.11108, -0.00799251, 0.238986, -0.00775697, -1.08508, 51.4367, -1.26126, -200.849)
+
+[node name="tree_01_tscn16" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08511, -0.00187073, -0.238965, -0.000152065, 1.11108, -0.00800758, 0.238972, -0.00778748, -1.08508, 28.5165, -1.2764, -182.817)
+
+[node name="tree_01_tscn17" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08511, -0.00193914, -0.238979, -0.000225328, 1.11108, -0.00799251, 0.238986, -0.00775697, -1.08508, -18.1473, -1.71472, -179.754)
+
+[node name="tree_01_tscn18" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08511, -0.00199214, -0.238939, -0.000270673, 1.11108, -0.00803433, 0.238948, -0.00778815, -1.08509, -35.0875, -1.46806, -192.127)
+
+[node name="tree_01_tscn19" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.0851, -0.00195896, -0.238996, -0.000249566, 1.11108, -0.00797404, 0.239004, -0.0077337, -1.08507, 12.4731, -1.6762, -201.614)
+
+[node name="tree_01_tscn20" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08603, 0.0134552, -0.234367, 0.0061262, 1.11053, 0.0353684, 0.234673, 0.0332778, -1.08554, -27.7442, -1.09151, -155.452)
+
+[node name="tree_01_tscn21" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.0762, -0.0208688, -0.275531, -0.0185248, 1.11089, -0.0117829, 0.275698, -0.006819, -1.07634, -45.4718, -1.40211, -160.36)
+
+[node name="tree_01_tscn22" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.0855, -0.0203992, -0.236289, -0.0185248, 1.1109, -0.0108037, 0.236443, -0.00661528, -1.08564, -45.4933, -1.59813, -177.071)
+
+[node name="tree_01_tscn23" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08519, 0.0267591, -0.237074, 0.0444256, 1.10745, -0.0783549, 0.234407, -0.0860063, -1.08269, -23.4989, -1.52003, -170.565)
+
+[node name="tree_01_tscn24" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.09862, 0.000795845, -0.16616, 0.00222023, 1.11107, -0.00935812, 0.166147, -0.00958491, -1.09858, 27.8806, -1.03026, -136.444)
+
+[node name="tree_01_tscn25" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08511, -0.00192236, -0.238966, -0.000205168, 1.11108, -0.00800648, 0.238973, -0.00777499, -1.08508, 3.51093, -1.16393, -127.603)
+
+[node name="tree_01_tscn26" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08534, 0.0132652, -0.237527, 0.0222667, 1.11018, -0.0397438, 0.236853, -0.0435822, -1.0847, -17.1859, -1.11757, -133.644)
+
+[node name="tree_01_tscn27" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08726, 0.0149826, -0.22851, 0.0168944, 1.11096, -0.00754265, 0.228376, -0.0108552, -1.08733, 90.7883, -1.06839, -166.016)
+
+[node name="tree_01_tscn28" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08415, 0.0108601, -0.243042, 0.0101332, 1.11106, 0.00444479, 0.243073, 0.00212043, -1.0842, 114.652, -0.639309, -125.256)
+
+[node name="tree_01_tscn29" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08234, 0.00972426, -0.251009, 0.00883025, 1.11106, 0.00496762, 0.251042, 0.00284419, -1.08238, 109.465, -0.402527, -86.4786)
+
+[node name="tree_01_tscn30" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08818, -0.0019372, -0.224574, -0.000329231, 1.11108, -0.00798903, 0.224582, -0.00775759, -1.08815, 164.824, 6.04697, -46.2502)
+
+[node name="tree_01_tscn31" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.0858, 9.96037e-05, -0.235796, 0.00182714, 1.11108, -0.00794436, 0.235789, -0.00815116, -1.08577, 240.774, 6.2333, -42.2357)
+
+[node name="tree_01_tscn32" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08489, -0.00177182, -0.239962, -0.00027858, 1.11109, -0.00694456, 0.239968, -0.0067205, -1.08487, 187.506, 5.88683, -73.3814)
+
+[node name="tree_01_tscn33" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.04046, -0.00194798, 0.389878, -0.00453496, 1.11108, -0.00655099, -0.389856, -0.00772572, -1.04044, 86.9744, -1.11002, -194.614)
+
+[node name="tree_01_tscn34" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08511, -0.00193914, -0.238979, -0.000225328, 1.11108, -0.00799251, 0.238986, -0.00775697, -1.08508, 75.6497, -1.15889, -172.632)
+
+[node name="tree_01_tscn35" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08508, 0.0014766, -0.239075, 0.00325066, 1.11108, -0.0078914, 0.239057, -0.00840599, -1.08506, 62.6031, -1.57598, -218.014)
+
+[node name="tree_01_tscn36" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08511, -0.00193914, -0.238979, -0.000225328, 1.11108, -0.00799251, 0.238986, -0.00775697, -1.08508, 27.5499, -2.31515, -234.728)
+
+[node name="tree_01_tscn37" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08508, -0.00406501, -0.239062, -0.00317788, 1.1111, -0.004469, 0.239075, -0.00368057, -1.08508, 73.225, -0.742506, -119.767)
+
+[node name="tree_01_tscn38" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08506, -0.00203838, -0.239192, -0.000375618, 1.11108, -0.00776466, 0.239201, -0.00750174, -1.08503, 92.5934, -0.635252, -109.035)
+
+[node name="tree_01_tscn39" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.0846, 0.00371036, -0.241243, 0.0057969, 1.11106, -0.00897386, 0.241202, -0.0100184, -1.08457, 119.506, -0.985483, -156.508)
+
+[node name="tree_01_tscn40" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08511, -0.00195198, -0.238978, -0.000238185, 1.11108, -0.00799385, 0.238985, -0.00775552, -1.08508, 141.835, -0.789862, -117.392)
+
+[node name="tree_01_tscn41" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08625, -0.00292443, -0.233709, -0.000499746, 1.11105, -0.0115799, 0.233727, -0.0112157, -1.08619, 189.974, 6.09312, -31.0739)
+
+[node name="tree_01_tscn42" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.10158, 0.00569843, -0.145142, 0.00856225, 1.11087, -0.0213703, 0.145001, -0.0223054, -1.10138, 132.137, 5.79632, -64.6899)
+
+[node name="tree_01_tscn43" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.10682, -0.000924231, -0.0975844, -0.00130926, 1.1111, 0.00432648, 0.09758, 0.00442475, -1.10681, 80.9227, -2.0813, -212.607)
+
+[node name="tree_01_tscn44" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.08921, -0.031984, -0.217181, -0.00652182, 1.10348, -0.129801, 0.219427, -0.125967, -1.08192, -3.57974, -2.21876, -234.558)
+
+[node name="tree_01_tscn45" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.10471, -0.0121578, -0.118484, -0.0104822, 1.11094, -0.0162626, 0.118644, -0.0150511, -1.10466, -10.2538, -1.60245, -219.723)
+
+[node name="tree_01_tscn46" type="Node3D" parent="SwampTrees" instance=ExtResource("29_nphhr")]
+transform = Transform3D(-1.0846, -0.0439762, -0.237205, -0.0301162, 1.10863, -0.0678275, 0.23936, -0.05978, -1.08337, -38.4921, -1.60036, -208.631)
+
 [node name="Player" parent="." instance=ExtResource("1_jbwu0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 229.289, 8.73419, -76.4325)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6375, 2.97976, 0)
 jumpForce = 10.0
 dashForce = 100.0
 dashDuration = 0.5

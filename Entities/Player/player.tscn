@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://do6p1ceto6aln" path="res://Entities/Player/States/player_doublejump.gd" id="9_owvpp"]
 [ext_resource type="Script" uid="uid://cyaunqyuecy2n" path="res://Entities/Player/seed_tracker.gd" id="10_ap3xn"]
 [ext_resource type="Script" uid="uid://c0c3ledrhr2cx" path="res://Entities/Player/States/player_dash.gd" id="10_xr8lj"]
-[ext_resource type="PackedScene" uid="uid://u314jes66jvq" path="res://Common/Meshes/Moth.fbx" id="11_ap3xn"]
+[ext_resource type="PackedScene" uid="uid://bxuhhi3qnuka1" path="res://Common/Meshes/Moth.glb" id="13_owvpp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mv1ah"]
 
@@ -20,7 +20,7 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mv1ah"]
 
-[node name="Player" type="CharacterBody3D" groups=["player"]]
+[node name="Player" type="CharacterBody3D"]
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("1_ffboj")
@@ -103,5 +103,5 @@ font_size = 64
 [node name="CombatTimer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Moth" parent="." instance=ExtResource("11_ap3xn")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
+[node name="Moth" parent="." instance=ExtResource("13_owvpp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)

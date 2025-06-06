@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TCG Game Jam"
-run/main_scene="uid://bb2j14h7dd1qo"
+run/main_scene="uid://0cqiufdanowc"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon.svg"
@@ -36,7 +36,8 @@ folder_colors={
 "res://Assets/": "gray",
 "res://Common/": "blue",
 "res://Entities/": "red",
-"res://Environment/": "green"
+"res://Environment/": "green",
+"res://UI/": "purple"
 }
 
 [filesystem]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ur4ttq22kqcs"]
+[gd_scene load_steps=7 format=3 uid="uid://ur4ttq22kqcs"]
 
 [ext_resource type="Script" uid="uid://02s2yw0g2xk8" path="res://Entities/Boss_03/boss_03.gd" id="1_hwx0x"]
+[ext_resource type="PackedScene" uid="uid://cas1ym7rlie8i" path="res://UI/End_Screen/end_screen.tscn" id="2_47y4p"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hwx0x"]
 
@@ -17,6 +18,7 @@ size = Vector3(2, 2, 2)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_hwx0x")
+endScene = ExtResource("2_47y4p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_hwx0x")

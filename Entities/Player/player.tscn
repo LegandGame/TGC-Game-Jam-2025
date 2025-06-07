@@ -101,4 +101,27 @@ one_shot = true
 [node name="Moth" parent="." instance=ExtResource("13_owvpp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
+[node name="Skeleton3D" parent="Moth/Armature" index="0"]
+bones/0/position = Vector3(-2.67623e-09, -0.610351, 0.235133)
+bones/0/rotation = Quaternion(0.216786, -0.00486926, -0.0219212, 0.975961)
+bones/1/rotation = Quaternion(0.110443, 6.61571e-10, -6.9836e-11, 0.993882)
+bones/4/rotation = Quaternion(-0.207655, -1.38404e-10, -5.05886e-08, 0.978202)
+bones/5/rotation = Quaternion(0.402169, 1.59737e-09, 9.63806e-08, 0.915566)
+bones/6/rotation = Quaternion(0.122962, -0.00263256, 0.990059, 0.068235)
+bones/7/rotation = Quaternion(-0.00702582, -0.000456183, -0.0326695, 0.999442)
+bones/13/rotation = Quaternion(-0.120839, -0.00315471, 0.988187, -0.09421)
+bones/14/rotation = Quaternion(-0.00702583, 0.000456175, 0.0326695, 0.999442)
+bones/20/rotation = Quaternion(0.957751, 1.71682e-09, 2.2609e-07, 0.287598)
+bones/21/rotation = Quaternion(1, 1.59095e-09, 2.37783e-07, -0.000864208)
+bones/22/rotation = Quaternion(0.715622, -0.0456979, -0.696418, 0.0282495)
+bones/23/rotation = Quaternion(-0.0580129, -0.00129881, -0.564929, 0.823097)
+bones/24/rotation = Quaternion(0.626294, 0.408396, 0.565148, 0.348678)
+bones/25/rotation = Quaternion(-0.0618929, 0.00125529, 0.602713, 0.795553)
+bones/26/position = Vector3(-0.400541, -1.73285, -1.00441)
+bones/26/rotation = Quaternion(0.612292, 0.252631, -0.666482, -0.342166)
+bones/27/rotation = Quaternion(0.00159293, 0.0415793, 0.210667, 0.976672)
+bones/28/position = Vector3(0.400541, -2.24059, 0.517579)
+bones/28/rotation = Quaternion(0.62338, 0.417184, 0.577668, 0.321954)
+bones/29/rotation = Quaternion(-0.00039921, -0.0414617, -0.212056, 0.976377)
+
 [editable path="Moth"]

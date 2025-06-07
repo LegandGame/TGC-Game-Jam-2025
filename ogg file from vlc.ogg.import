@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://q2flrac7aqa8"
+path="res://.godot/imported/ogg file from vlc.ogg-3c7553aaf3698bd3cb6c5d75ae9f9914.oggvorbisstr"
+
+[deps]
+
+source_file="res://ogg file from vlc.ogg"
+dest_files=["res://.godot/imported/ogg file from vlc.ogg-3c7553aaf3698bd3cb6c5d75ae9f9914.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

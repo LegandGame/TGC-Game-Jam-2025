@@ -896,7 +896,7 @@ transform = Transform3D(-1.0846, -0.0439762, -0.237205, -0.0301162, 1.10863, -0.
 
 [node name="Player" parent="." instance=ExtResource("1_jbwu0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6375, 2.97976, 0)
-walkSpeed = 1.5
+walkSpeed = 3.0
 jumpForce = 10.0
 dashForce = 100.0
 dashDuration = 0.5

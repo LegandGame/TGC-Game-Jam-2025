@@ -60,8 +60,7 @@ func add_state(state : PlayerState) -> void:
 
 func _physics_process(delta: float) -> void:
 	# DEBUG LABELS TEMPORARY
-	$DebugStateLabel.text = stateMachine.curState.name
-	$DebugHealthLabel.text = str(health.get_max_health(), "/", health.get_cur_health())
+	$DebugHealthLabel.text = str(health.get_max_health(), "/", snappedf(health.get_cur_health(), 0.1))
 	# CAMERA (state independent)
 	cameraPivot.rotation.x += cameraInputDir.y * delta
 	cameraPivot.rotation.x = clamp(cameraPivot.rotation.x, deg_to_rad(-80), deg_to_rad(30))

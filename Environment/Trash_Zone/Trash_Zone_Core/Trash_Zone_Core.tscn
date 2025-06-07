@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsvbdy7ucqoka"]
+[gd_scene load_steps=7 format=3 uid="uid://dsvbdy7ucqoka"]
 
 [ext_resource type="Script" uid="uid://dwfsh6s2qsqnh" path="res://Environment/Trash_Zone/Trash_Zone_Core/trash_zone_core.gd" id="1_3odm7"]
 [ext_resource type="Script" uid="uid://e0tghmpdna2a" path="res://Common/health_component.gd" id="2_m7o6w"]
 [ext_resource type="Script" uid="uid://cpgyi002n12n8" path="res://Common/interactable.gd" id="2_sxqln"]
+[ext_resource type="PackedScene" uid="uid://bvcwwb1c15dsa" path="res://Common/Materials/trash_bag.tscn" id="4_w2ebg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3odm7"]
 
@@ -21,9 +22,13 @@ metadata/_custom_type_script = "uid://cpgyi002n12n8"
 shape = SubResource("SphereShape3D_3odm7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("SphereMesh_sxqln")
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("2_m7o6w")
 maxHealth = 1.0
 metadata/_custom_type_script = "uid://e0tghmpdna2a"
+
+[node name="TrashBag" parent="." instance=ExtResource("4_w2ebg")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)

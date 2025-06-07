@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://do6p1ceto6aln" path="res://Entities/Player/States/player_doublejump.gd" id="9_owvpp"]
 [ext_resource type="Script" uid="uid://cyaunqyuecy2n" path="res://Entities/Player/seed_tracker.gd" id="10_ap3xn"]
 [ext_resource type="Script" uid="uid://c0c3ledrhr2cx" path="res://Entities/Player/States/player_dash.gd" id="10_xr8lj"]
-[ext_resource type="PackedScene" uid="uid://u314jes66jvq" path="res://Common/Meshes/Moth.fbx" id="11_ap3xn"]
+[ext_resource type="PackedScene" uid="uid://bxuhhi3qnuka1" path="res://Common/Meshes/Moth.glb" id="13_owvpp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mv1ah"]
 
@@ -20,7 +20,7 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mv1ah"]
 
-[node name="Player" type="CharacterBody3D" groups=["player"]]
+[node name="Player" type="CharacterBody3D"]
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("1_ffboj")
@@ -47,8 +47,9 @@ spring_length = 3.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initialState")]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("animator", "initialState")]
 script = ExtResource("2_3uyv8")
+animator = NodePath("../Moth/AnimationPlayer")
 initialState = NodePath("Idle")
 metadata/_custom_type_script = "uid://b5dgfcs3asibd"
 
@@ -88,14 +89,8 @@ script = ExtResource("6_4wf4l")
 maxHealth = 3.0
 metadata/_custom_type_script = "uid://e0tghmpdna2a"
 
-[node name="DebugStateLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24121, 0)
-billboard = 1
-text = "Debug Test"
-font_size = 64
-
 [node name="DebugHealthLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.70828, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06603, 0)
 billboard = 1
 text = "Debug Test"
 font_size = 64
@@ -103,5 +98,30 @@ font_size = 64
 [node name="CombatTimer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Moth" parent="." instance=ExtResource("11_ap3xn")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1, 0)
+[node name="Moth" parent="." instance=ExtResource("13_owvpp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="Skeleton3D" parent="Moth/Armature" index="0"]
+bones/0/position = Vector3(5.09577e-17, -0.404517, 0.235133)
+bones/0/rotation = Quaternion(0.431648, -7.91434e-18, 3.75528e-17, 0.902042)
+bones/1/rotation = Quaternion(0.110443, -3.09873e-18, 2.32283e-18, 0.993882)
+bones/4/rotation = Quaternion(-0.333206, -3.76804e-15, -7.94424e-08, 0.942854)
+bones/5/rotation = Quaternion(0.279583, 2.13163e-14, 6.66578e-08, 0.960122)
+bones/6/rotation = Quaternion(0.131284, -0.146682, 0.979208, 0.0489996)
+bones/7/rotation = Quaternion(-0.0070258, -0.000456178, -0.0326695, 0.999442)
+bones/13/rotation = Quaternion(-0.133462, -0.149517, 0.976815, -0.0752684)
+bones/14/rotation = Quaternion(-0.0070258, 0.000456183, 0.0326695, 0.999442)
+bones/20/rotation = Quaternion(0.998621, 1.42109e-14, 2.3809e-07, 0.0524957)
+bones/21/rotation = Quaternion(0.998438, -2.13163e-14, 2.38046e-07, -0.055879)
+bones/22/rotation = Quaternion(0.714138, 0.122082, -0.669659, -0.163279)
+bones/23/rotation = Quaternion(-0.034319, -0.00148639, -0.334198, 0.941877)
+bones/24/rotation = Quaternion(0.71303, -0.129405, 0.667691, -0.170387)
+bones/25/rotation = Quaternion(-0.0331896, 0.0014925, 0.3232, 0.945747)
+bones/26/position = Vector3(-0.400541, -0.371527, -1.68875)
+bones/26/rotation = Quaternion(0.504777, 0.414257, -0.58001, -0.487011)
+bones/27/rotation = Quaternion(0.00159294, 0.0415793, 0.210667, 0.976672)
+bones/28/position = Vector3(0.400541, -0.349452, -1.69611)
+bones/28/rotation = Quaternion(0.507929, -0.409698, 0.583001, -0.48401)
+bones/29/rotation = Quaternion(-0.000399202, -0.0414617, -0.212056, 0.976377)
+
+[editable path="Moth"]

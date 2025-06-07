@@ -46,4 +46,4 @@ func on_state_transition(calling_state : State, new_state_name : String):
 func play_state_anim(state : State) -> void:
 	if !animator or !animator.has_animation(state.name.to_upper()):
 		return
-	animator.play(state.name)
+	animator.play(state.name.to_upper())

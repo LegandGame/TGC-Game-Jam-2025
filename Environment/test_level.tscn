@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dsvbdy7ucqoka" path="res://Environment/Trash_Zone/Trash_Zone_Core/Trash_Zone_Core.tscn" id="5_vs8uc"]
 [ext_resource type="PackedScene" uid="uid://bvx2j0q7tg6cu" path="res://Entities/Boss_02/Boss_02.tscn" id="6_vhre0"]
 [ext_resource type="PackedScene" uid="uid://ur4ttq22kqcs" path="res://Entities/Boss_03/Boss_03.tscn" id="7_l0idg"]
-[ext_resource type="PackedScene" path="res://Environment/level_01.tscn" id="8_vs8uc"]
+[ext_resource type="PackedScene" uid="uid://bb2j14h7dd1qo" path="res://Environment/level_01.tscn" id="8_vs8uc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yijdk"]
 sky_top_color = Color(0.419318, 0.460197, 0.85151, 1)

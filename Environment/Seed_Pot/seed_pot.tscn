@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://q4nrk4l1g0ur"]
+[gd_scene load_steps=8 format=3 uid="uid://q4nrk4l1g0ur"]
 
 [ext_resource type="Script" uid="uid://cpgyi002n12n8" path="res://Common/interactable.gd" id="1_ohpa8"]
 [ext_resource type="Script" uid="uid://dg7b75408tiul" path="res://Environment/Seed_Pot/seed_pot.gd" id="1_v5mo4"]
@@ -7,9 +7,6 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ohpa8"]
 height = 0.3
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5mo4"]
-albedo_color = Color(0.407593, 0.298948, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eua1m"]
 size = Vector3(1, 1.73584, 1)
@@ -24,11 +21,6 @@ script = ExtResource("1_v5mo4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_ohpa8")
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-visible = false
-height = 0.3
-material = SubResource("StandardMaterial3D_v5mo4")
-
 [node name="Interactable" type="Area3D" parent="."]
 collision_layer = 8
 collision_mask = 2
@@ -38,12 +30,6 @@ metadata/_custom_type_script = "uid://cpgyi002n12n8"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36792, 0)
 shape = SubResource("BoxShape3D_eua1m")
-
-[node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-visible = false
-billboard = 1
-text = "Press [E]"
 
 [node name="SafetyArea" type="Area3D" parent="."]
 collision_mask = 2
@@ -58,3 +44,4 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.154206, 0)
 
 [node name="Plant" parent="." instance=ExtResource("4_bac8y")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.11264, 0)
+visible = false

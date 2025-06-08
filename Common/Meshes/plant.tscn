@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=3 uid="uid://dj2xj0n2medap"]
+
+[ext_resource type="PackedScene" uid="uid://jw6ksah28qla" path="res://Common/Meshes/Plant.fbx" id="1_sv47c"]
+[ext_resource type="Texture2D" uid="uid://dri5rvg0kjq31" path="res://Common/Materials/Textures/Plant_Plant_BaseColor.png" id="2_66i4v"]
+[ext_resource type="Texture2D" uid="uid://cne14pt5vm72a" path="res://Common/Materials/Textures/Plant_Plant_Emissive.png" id="3_mst4e"]
+[ext_resource type="Texture2D" uid="uid://c2mffsbp4rn23" path="res://Common/Materials/Textures/Plant_Plant_Normal.png" id="4_x12sr"]
+[ext_resource type="Texture2D" uid="uid://c6hij1ogh26st" path="res://Common/Materials/Textures/Plant_Plant_OcclusionRoughnessMetallic.png" id="5_45tmq"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_jinbt"]
+cull_mode = 2
+albedo_texture = ExtResource("2_66i4v")
+orm_texture = ExtResource("5_45tmq")
+emission_enabled = true
+emission_intensity = 100000.0
+emission_texture = ExtResource("3_mst4e")
+normal_enabled = true
+normal_texture = ExtResource("4_x12sr")
+
+[node name="Plant" instance=ExtResource("1_sv47c")]
+
+[node name="Plant" parent="." index="0"]
+surface_material_override/0 = SubResource("ORMMaterial3D_jinbt")

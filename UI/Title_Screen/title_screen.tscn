@@ -44,7 +44,7 @@ alignment = 1
 [node name="Title" type="RichTextLabel" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 64
-text = "TCG Game Jam"
+text = "Cryptid Country"
 fit_content = true
 scroll_active = false
 autowrap_mode = 0

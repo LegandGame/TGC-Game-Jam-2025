@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvx2j0q7tg6cu"]
+[gd_scene load_steps=8 format=3 uid="uid://bvx2j0q7tg6cu"]
 
 [ext_resource type="Script" uid="uid://pmsqkgkmtfjh" path="res://Entities/Boss_02/boss_02.gd" id="1_dqmmr"]
 [ext_resource type="Script" uid="uid://c0c3ledrhr2cx" path="res://Entities/Player/States/player_dash.gd" id="1_radrd"]
+[ext_resource type="PackedScene" uid="uid://3188p5to0lwn" path="res://Common/Meshes/cat.tscn" id="3_wqn68"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dqmmr"]
 
@@ -12,7 +13,7 @@ albedo_color = Color(1, 1, 0, 1)
 material = SubResource("StandardMaterial3D_dqmmr")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6y0cd"]
-size = Vector3(2, 2, 2)
+size = Vector3(2, 3.10437, 6.88275)
 
 [node name="Boss02" type="CharacterBody3D" node_paths=PackedStringArray("reward")]
 collision_layer = 4
@@ -21,9 +22,11 @@ script = ExtResource("1_dqmmr")
 reward = NodePath("Dash")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
 shape = SubResource("CylinderShape3D_dqmmr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CylinderMesh_wqn68")
 
 [node name="InteractArea" type="Area3D" parent="."]
@@ -31,8 +34,12 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.552185, -0.17392)
 shape = SubResource("BoxShape3D_6y0cd")
 
 [node name="Dash" type="Node" parent="."]
 script = ExtResource("1_radrd")
 metadata/_custom_type_script = "uid://c0c3ledrhr2cx"
+
+[node name="Cat" parent="." instance=ExtResource("3_wqn68")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.15249, 0)

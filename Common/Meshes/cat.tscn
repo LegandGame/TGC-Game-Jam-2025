@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://3188p5to0lwn"]
+
+[ext_resource type="PackedScene" uid="uid://cngj7amcjqfcg" path="res://Common/Meshes/Cat.fbx" id="1_gsypg"]
+[ext_resource type="Texture2D" uid="uid://doqp0g6cj5b61" path="res://Common/Materials/Textures/Cat_Cat_BaseColor.png" id="2_q77ql"]
+[ext_resource type="Texture2D" uid="uid://cup8cuyy0xvgi" path="res://Common/Materials/Textures/Cat_Cat_Normal.png" id="3_y7qfi"]
+[ext_resource type="Texture2D" uid="uid://c5hwnr4wcw1t2" path="res://Common/Materials/Textures/Cat_Cat_OcclusionRoughnessMetallic.png" id="4_7gn42"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_xprw0"]
+albedo_texture = ExtResource("2_q77ql")
+orm_texture = ExtResource("4_7gn42")
+normal_enabled = true
+normal_texture = ExtResource("3_y7qfi")
+
+[node name="Cat" instance=ExtResource("1_gsypg")]
+
+[node name="Cat" parent="." index="0"]
+surface_material_override/0 = SubResource("ORMMaterial3D_xprw0")

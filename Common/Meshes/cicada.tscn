@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://13bdxi14xj8"]
+[gd_scene load_steps=6 format=3 uid="uid://13bdxi14xj8"]
 
 [ext_resource type="PackedScene" uid="uid://d4faassbm0q77" path="res://Common/Meshes/Cicada.glb" id="1_ftptd"]
+[ext_resource type="Texture2D" uid="uid://da1lc2ukwjgk0" path="res://Common/Materials/Textures/Cicada_Cicada_BaseColor.png" id="2_ssy0k"]
+[ext_resource type="Texture2D" uid="uid://dm5f4lojc6w8d" path="res://Common/Materials/Textures/Cicada_Cicada_Normal.png" id="3_w0ohk"]
+[ext_resource type="Texture2D" uid="uid://ck3l01a3dxvu3" path="res://Common/Materials/Textures/Cicada_Cicada_OcclusionRoughnessMetallic.png" id="4_rsl7y"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_dabx1"]
+albedo_texture = ExtResource("2_ssy0k")
+orm_texture = ExtResource("4_rsl7y")
+normal_enabled = true
+normal_texture = ExtResource("3_w0ohk")
 
 [node name="Cicada2" instance=ExtResource("1_ftptd")]
 
 [node name="Cicada" parent="." index="0"]
 gi_mode = 2
+surface_material_override/0 = SubResource("ORMMaterial3D_dabx1")

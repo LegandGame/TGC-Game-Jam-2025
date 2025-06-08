@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://q4nrk4l1g0ur"]
+[gd_scene load_steps=8 format=3 uid="uid://q4nrk4l1g0ur"]
 
 [ext_resource type="Script" uid="uid://cpgyi002n12n8" path="res://Common/interactable.gd" id="1_ohpa8"]
 [ext_resource type="Script" uid="uid://dg7b75408tiul" path="res://Environment/Seed_Pot/seed_pot.gd" id="1_v5mo4"]
+[ext_resource type="PackedScene" uid="uid://b6lym7qtblacl" path="res://Common/Meshes/seed_pot.tscn" id="3_eua1m"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ohpa8"]
 height = 0.3
@@ -23,6 +24,7 @@ script = ExtResource("1_v5mo4")
 shape = SubResource("CylinderShape3D_ohpa8")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+visible = false
 height = 0.3
 material = SubResource("StandardMaterial3D_v5mo4")
 
@@ -49,3 +51,6 @@ monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SafetyArea"]
 shape = SubResource("CylinderShape3D_v5mo4")
+
+[node name="SeedPot" parent="." instance=ExtResource("3_eua1m")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.154206, 0)

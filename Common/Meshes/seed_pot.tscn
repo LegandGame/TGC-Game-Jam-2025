@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6lym7qtblacl"]
+
+[ext_resource type="PackedScene" uid="uid://bscos05ir512d" path="res://Common/Meshes/SeedPot.fbx" id="1_w7aqc"]
+[ext_resource type="Texture2D" uid="uid://bjafjwrmnoqi2" path="res://Common/Materials/Textures/SeedPot_BaseColor.png" id="2_h6l21"]
+[ext_resource type="Texture2D" uid="uid://btu3q5d0nj855" path="res://Common/Materials/Textures/SeedPot_Normal.png" id="3_6winu"]
+[ext_resource type="Texture2D" uid="uid://cfwcn5lqkyydg" path="res://Common/Materials/Textures/SeedPot_OcclusionRoughnessMetallic.png" id="4_d3yix"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_37l3d"]
+albedo_texture = ExtResource("2_h6l21")
+orm_texture = ExtResource("4_d3yix")
+normal_enabled = true
+normal_texture = ExtResource("3_6winu")
+
+[node name="SeedPot" instance=ExtResource("1_w7aqc")]
+
+[node name="Pot" parent="." index="0"]
+surface_material_override/0 = SubResource("ORMMaterial3D_37l3d")

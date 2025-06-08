@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://gjvu5whgp3w4"]
+
+[ext_resource type="PackedScene" uid="uid://qin1cxhm2jxe" path="res://Common/Meshes/Seed.fbx" id="1_inpdp"]
+[ext_resource type="Texture2D" uid="uid://id31kavhgycb" path="res://Common/Materials/Textures/Seed_Seed_BaseColor.png" id="2_56xkg"]
+[ext_resource type="Texture2D" uid="uid://c2r443qew3lde" path="res://Common/Materials/Textures/Seed_Seed_Normal.png" id="3_gx3jw"]
+[ext_resource type="Texture2D" uid="uid://bg6p8kvi4uxni" path="res://Common/Materials/Textures/Seed_Seed_OcclusionRoughnessMetallic.png" id="4_atgky"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_cxp4o"]
+albedo_texture = ExtResource("2_56xkg")
+orm_texture = ExtResource("4_atgky")
+normal_enabled = true
+normal_texture = ExtResource("3_gx3jw")
+
+[node name="Seed" instance=ExtResource("1_inpdp")]
+
+[node name="Seed" parent="." index="0"]
+surface_material_override/0 = SubResource("ORMMaterial3D_cxp4o")

@@ -1615,8 +1615,594 @@ bus = &"Music"
 [node name="SeedPot" parent="CorruptedZones" instance=ExtResource("35_pw61q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 245.949, -21.0396, 256.092)
 
+[node name="Area2CorruptedZones" type="Node" parent="."]
+
+[node name="TutorialCorrupted" type="Node3D" parent="Area2CorruptedZones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.4616, 4.80229, -75.4217)
+
+[node name="TrashZoneHandler" parent="Area2CorruptedZones/TutorialCorrupted" instance=ExtResource("5_vwcvh")]
+transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574, -9.39506, 1.238, 1.29916)
+
+[node name="Decals" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler"]
+transform = Transform3D(-0.990574, 0, 0.136978, 0, 1, 0, -0.136978, 0, -0.990574, -9.48446, -1.238, -2.38419e-06)
+
+[node name="Decal" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.994187, -0.0941731, -0.0527583, -0.0955965, 0.995103, 0.025134, 0.0501316, 0.0300312, -0.99831, -36.6533, 0.525275, 0.726884)
+size = Vector3(18.4903, 2, 34.8454)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal2" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991982, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.99272, -46.9825, 0.642486, -17.6688)
+size = Vector3(28.1117, 2, 27.6198)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal3" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -57.9282, 1.26518, 9.43267)
+size = Vector3(21.1808, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal4" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -47.531, -0.783302, 9.01645)
+size = Vector3(21.1808, 5.04871, 26.4627)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal5" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991963, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -54.9792, -0.489263, -4.97871)
+size = Vector3(27.3341, 5.04871, 27.2727)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal6" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991966, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992718, -72.9004, -0.664895, 3.04545)
+size = Vector3(28.3767, 5.04871, 33.6433)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal7" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991967, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992719, -70.5447, 0.175127, -17.3255)
+size = Vector3(32.3004, 5.04871, 27.4944)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal8" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -85.3485, -1.42008, -11.5191)
+size = Vector3(30.6303, 5.04871, 30.5023)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="TrashZoneCore" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.6662, -0.587468, 7.42707)
+
+[node name="TrashZoneCore2" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0712, -0.587468, 21.9037)
+
+[node name="TrashZoneCore3" parent="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.2344, -0.587468, 7.90501)
+
+[node name="Audio" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted"]
+
+[node name="Music" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted/Audio"]
+
+[node name="Corruption Music" type="AudioStreamPlayer3D" parent="Area2CorruptedZones/TutorialCorrupted/Audio/Music"]
+transform = Transform3D(0.592062, 0.054156, 0.804071, -0.0381491, 0.998504, -0.0391612, -0.804989, -0.00748877, 0.593242, -325.037, -127.665, -229.308)
+stream = ExtResource("29_pw61q")
+unit_size = 23.34
+max_db = -3.0
+autoplay = true
+max_distance = 220.42
+bus = &"Music"
+
+[node name="CAVE MUSIC" type="AudioStreamPlayer3D" parent="Area2CorruptedZones/TutorialCorrupted/Audio/Music"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 348.22, -11.7737, 62.0763)
+stream = ExtResource("30_l4em3")
+volume_db = -5.0
+unit_size = 12.85
+max_db = -3.0
+autoplay = true
+bus = &"Music"
+
+[node name="TutorialCorrupted2" type="Node3D" parent="Area2CorruptedZones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 134.72, 4.80229, -63.7897)
+
+[node name="TrashZoneHandler" parent="Area2CorruptedZones/TutorialCorrupted2" instance=ExtResource("5_vwcvh")]
+transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574, -9.39506, 1.238, 1.29916)
+
+[node name="Decals" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler"]
+transform = Transform3D(-0.990574, 0, 0.136978, 0, 1, 0, -0.136978, 0, -0.990574, -9.48446, -1.238, -2.38419e-06)
+
+[node name="Decal" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.994187, -0.0941731, -0.0527583, -0.0955965, 0.995103, 0.025134, 0.0501316, 0.0300312, -0.99831, -36.6533, 0.525275, 0.726884)
+size = Vector3(18.4903, 2, 34.8454)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal2" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991982, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.99272, -46.9825, 0.642486, -17.6688)
+size = Vector3(28.1117, 2, 27.6198)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal3" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -57.9282, 1.26518, 9.43267)
+size = Vector3(21.1808, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal4" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -47.531, -0.783302, 9.01645)
+size = Vector3(21.1808, 5.04871, 26.4627)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal5" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991963, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -54.9792, -0.489263, -4.97871)
+size = Vector3(27.3341, 5.04871, 27.2727)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal6" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991966, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992718, -72.9004, -0.664895, 3.04545)
+size = Vector3(28.3767, 5.04871, 33.6433)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal7" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991967, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992719, -70.5447, 0.175127, -17.3255)
+size = Vector3(32.3004, 5.04871, 27.4944)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal8" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -85.3485, -1.42008, -11.5191)
+size = Vector3(30.6303, 5.04871, 30.5023)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="TrashZoneCore" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.6662, -0.587468, 7.42707)
+
+[node name="TrashZoneCore2" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0712, -0.587468, 21.9037)
+
+[node name="TrashZoneCore3" parent="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.2344, -0.587468, 7.90501)
+
+[node name="Audio" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted2"]
+
+[node name="Music" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted2/Audio"]
+
+[node name="Corruption Music" type="AudioStreamPlayer3D" parent="Area2CorruptedZones/TutorialCorrupted2/Audio/Music"]
+transform = Transform3D(0.592062, 0.054156, 0.804071, -0.0381491, 0.998504, -0.0391612, -0.804989, -0.00748877, 0.593242, -325.037, -127.665, -229.308)
+stream = ExtResource("29_pw61q")
+unit_size = 23.34
+max_db = -3.0
+autoplay = true
+max_distance = 220.42
+bus = &"Music"
+
+[node name="CAVE MUSIC" type="AudioStreamPlayer3D" parent="Area2CorruptedZones/TutorialCorrupted2/Audio/Music"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 348.22, -11.7737, 62.0763)
+stream = ExtResource("30_l4em3")
+volume_db = -5.0
+unit_size = 12.85
+max_db = -3.0
+autoplay = true
+bus = &"Music"
+
+[node name="TutorialCorrupted3" type="Node3D" parent="Area2CorruptedZones"]
+transform = Transform3D(0.999959, 0.00900578, 0, -0.00900578, 0.999959, 0, 0, 0, 1, 186.777, 2.81777, -45.3108)
+
+[node name="TrashZoneHandler" parent="Area2CorruptedZones/TutorialCorrupted3" instance=ExtResource("5_vwcvh")]
+transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574, -9.39506, 1.238, 1.29916)
+
+[node name="Decals" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler"]
+transform = Transform3D(-0.990574, 0, 0.136978, 0, 1, 0, -0.136978, 0, -0.990574, -9.48446, -1.238, -2.38419e-06)
+
+[node name="Decal" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.994187, -0.0941731, -0.0527583, -0.0955965, 0.995103, 0.025134, 0.0501316, 0.0300312, -0.99831, -36.6533, 0.525275, 0.726884)
+size = Vector3(18.4903, 2, 34.8454)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal2" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991982, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.99272, -46.9825, 0.642486, -17.6688)
+size = Vector3(28.1117, 2, 27.6198)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal3" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -57.9282, 1.26518, 9.43267)
+size = Vector3(21.1808, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal4" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -47.531, -0.783302, 9.01645)
+size = Vector3(21.1808, 5.04871, 26.4627)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal5" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991963, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -54.9792, -0.489263, -4.97871)
+size = Vector3(27.3341, 5.04871, 27.2727)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal6" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991966, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992718, -72.9004, -0.664895, 3.04545)
+size = Vector3(28.3767, 5.04871, 33.6433)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal7" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991967, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992719, -70.5447, 0.175127, -17.3255)
+size = Vector3(32.3004, 5.04871, 27.4944)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal8" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -85.3485, -1.42008, -11.5191)
+size = Vector3(30.6303, 5.04871, 30.5023)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="TrashZoneCore" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.6662, -0.587468, 7.42707)
+
+[node name="TrashZoneCore2" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0712, -0.587468, 21.9037)
+
+[node name="TrashZoneCore3" parent="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.2344, -0.587468, 7.90501)
+
+[node name="Audio" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted3"]
+
+[node name="Music" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted3/Audio"]
+
+[node name="Corruption Music" type="AudioStreamPlayer3D" parent="Area2CorruptedZones/TutorialCorrupted3/Audio/Music"]
+transform = Transform3D(0.592062, 0.054156, 0.804071, -0.0381491, 0.998504, -0.0391612, -0.804989, -0.00748877, 0.593242, -325.037, -127.665, -229.308)
+stream = ExtResource("29_pw61q")
+unit_size = 23.34
+max_db = -3.0
+autoplay = true
+max_distance = 220.42
+bus = &"Music"
+
+[node name="CAVE MUSIC" type="AudioStreamPlayer3D" parent="Area2CorruptedZones/TutorialCorrupted3/Audio/Music"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 348.22, -11.7737, 62.0763)
+stream = ExtResource("30_l4em3")
+volume_db = -5.0
+unit_size = 12.85
+max_db = -3.0
+autoplay = true
+bus = &"Music"
+
+[node name="TutorialCorrupted4" type="Node3D" parent="Area2CorruptedZones"]
+transform = Transform3D(0.999879, 0.0155677, 0, -0.0155677, 0.999879, 0, 0, 0, 1, 232.607, 2.81777, -45.3108)
+
+[node name="TrashZoneHandler" parent="Area2CorruptedZones/TutorialCorrupted4" instance=ExtResource("5_vwcvh")]
+transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574, -9.39506, 1.238, 1.29916)
+
+[node name="Decals" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler"]
+transform = Transform3D(-0.990574, 0, 0.136978, 0, 1, 0, -0.136978, 0, -0.990574, -9.48446, -1.238, -2.38419e-06)
+
+[node name="Decal" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.994187, -0.0941731, -0.0527583, -0.0955965, 0.995103, 0.025134, 0.0501316, 0.0300312, -0.99831, -36.6533, 0.525275, 0.726884)
+size = Vector3(18.4903, 2, 34.8454)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal2" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991982, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.99272, -46.9825, 0.642486, -17.6688)
+size = Vector3(28.1117, 2, 27.6198)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal3" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -57.9282, 1.26518, 9.43267)
+size = Vector3(21.1808, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal4" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -47.531, -0.783302, 9.01645)
+size = Vector3(21.1808, 5.04871, 26.4627)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal5" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991963, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -54.9792, -0.489263, -4.97871)
+size = Vector3(27.3341, 5.04871, 27.2727)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal6" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991966, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992718, -72.9004, -0.664895, 3.04545)
+size = Vector3(28.3767, 5.04871, 33.6433)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal7" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991967, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992719, -70.5447, 0.175127, -17.3255)
+size = Vector3(32.3004, 5.04871, 27.4944)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal8" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -85.3485, -1.42008, -11.5191)
+size = Vector3(30.6303, 5.04871, 30.5023)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="TrashZoneCore" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.6662, -0.587468, 7.42707)
+
+[node name="TrashZoneCore2" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0712, -0.587468, 21.9037)
+
+[node name="TrashZoneCore3" parent="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.2344, -0.587468, 7.90501)
+
+[node name="Audio" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted4"]
+
+[node name="Music" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted4/Audio"]
+
+[node name="Corruption Music" type="AudioStreamPlayer3D" parent="Area2CorruptedZones/TutorialCorrupted4/Audio/Music"]
+transform = Transform3D(0.592062, 0.054156, 0.804071, -0.0381491, 0.998504, -0.0391612, -0.804989, -0.00748877, 0.593242, -325.037, -127.665, -229.308)
+stream = ExtResource("29_pw61q")
+unit_size = 23.34
+max_db = -3.0
+autoplay = true
+max_distance = 220.42
+bus = &"Music"
+
+[node name="CAVE MUSIC" type="AudioStreamPlayer3D" parent="Area2CorruptedZones/TutorialCorrupted4/Audio/Music"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 348.22, -11.7737, 62.0763)
+stream = ExtResource("30_l4em3")
+volume_db = -5.0
+unit_size = 12.85
+max_db = -3.0
+autoplay = true
+bus = &"Music"
+
+[node name="TutorialCorrupted5" type="Node3D" parent="Area2CorruptedZones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.082, 121.97, -284.941)
+
+[node name="TrashZoneHandler" parent="Area2CorruptedZones/TutorialCorrupted5" instance=ExtResource("5_vwcvh")]
+transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574, -9.39506, 1.238, 1.29916)
+
+[node name="Decals" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler"]
+transform = Transform3D(-0.990574, 0, 0.136978, 0, 1, 0, -0.136978, 0, -0.990574, -9.48446, -1.238, -2.38419e-06)
+
+[node name="Decal" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.994187, -0.0941731, -0.0527583, -0.0955965, 0.995103, 0.025134, 0.0501316, 0.0300312, -0.99831, -36.6533, 0.525275, 0.726884)
+size = Vector3(18.4903, 2, 34.8454)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal2" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991982, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.99272, -46.9825, 0.642486, -17.6688)
+size = Vector3(28.1117, 2, 27.6198)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal3" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -57.9282, 1.26518, 9.43267)
+size = Vector3(21.1808, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal4" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -47.531, -0.783302, 9.01645)
+size = Vector3(21.1808, 5.04871, 26.4627)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal5" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991963, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -54.9792, -0.489263, -4.97871)
+size = Vector3(27.3341, 5.04871, 27.2727)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal6" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991966, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992718, -72.9004, -0.664895, 3.04545)
+size = Vector3(28.3767, 5.04871, 33.6433)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal7" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991967, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992719, -70.5447, 0.175127, -17.3255)
+size = Vector3(32.3004, 5.04871, 27.4944)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal8" type="Decal" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -85.3485, -1.42008, -11.5191)
+size = Vector3(30.6303, 5.04871, 30.5023)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="TrashZoneCore" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.6662, -0.587468, 7.42707)
+
+[node name="TrashZoneCore2" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0712, -0.587468, 21.9037)
+
+[node name="TrashZoneCore3" parent="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.2344, -0.587468, 7.90501)
+
+[node name="Audio" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted5"]
+
+[node name="Music" type="Node3D" parent="Area2CorruptedZones/TutorialCorrupted5/Audio"]
+
+[node name="Corruption Music" type="AudioStreamPlayer3D" parent="Area2CorruptedZones/TutorialCorrupted5/Audio/Music"]
+transform = Transform3D(0.592062, 0.054156, 0.804071, -0.0381491, 0.998504, -0.0391612, -0.804989, -0.00748877, 0.593242, -325.037, -127.665, -229.308)
+stream = ExtResource("29_pw61q")
+unit_size = 23.34
+max_db = -3.0
+autoplay = true
+max_distance = 220.42
+bus = &"Music"
+
+[node name="CAVE MUSIC" type="AudioStreamPlayer3D" parent="Area2CorruptedZones/TutorialCorrupted5/Audio/Music"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 348.22, -11.7737, 62.0763)
+stream = ExtResource("30_l4em3")
+volume_db = -5.0
+unit_size = 12.85
+max_db = -3.0
+autoplay = true
+bus = &"Music"
+
+[node name="Area3CorruptedZones" type="Node" parent="."]
+
+[node name="TutorialCorrupted6" type="Node3D" parent="Area3CorruptedZones"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -169.301, 1.04084, -16.5032)
+
+[node name="TrashZoneHandler" parent="Area3CorruptedZones/TutorialCorrupted6" instance=ExtResource("5_vwcvh")]
+transform = Transform3D(-0.990574, 0, -0.136978, 0, 1, 0, 0.136978, 0, -0.990574, -9.39506, 1.238, 1.29916)
+
+[node name="Decals" type="Node3D" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler"]
+transform = Transform3D(-0.990574, 0, 0.136978, 0, 1, 0, -0.136978, 0, -0.990574, -9.48446, -1.238, -2.38419e-06)
+
+[node name="Decal" type="Decal" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.994187, -0.0941731, -0.0527583, -0.0955965, 0.995103, 0.025134, 0.0501316, 0.0300312, -0.99831, -36.6533, 0.525275, 0.726884)
+size = Vector3(18.4903, 2, 34.8454)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal2" type="Decal" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991982, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.99272, -46.9825, 0.642486, -17.6688)
+size = Vector3(28.1117, 2, 27.6198)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal3" type="Decal" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991958, -0.0697605, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656386, -0.992712, -57.9282, 1.26518, 9.43267)
+size = Vector3(21.1808, 5.04871, 17.7663)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal4" type="Decal" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -47.531, -0.783302, 9.01645)
+size = Vector3(21.1808, 5.04871, 26.4627)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal5" type="Decal" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991963, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -54.9792, -0.489263, -4.97871)
+size = Vector3(27.3341, 5.04871, 27.2727)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal6" type="Decal" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991966, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992718, -72.9004, -0.664895, 3.04545)
+size = Vector3(28.3767, 5.04871, 33.6433)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal7" type="Decal" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991967, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992719, -70.5447, 0.175127, -17.3255)
+size = Vector3(32.3004, 5.04871, 27.4944)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="Decal8" type="Decal" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler/Decals"]
+transform = Transform3D(-0.991964, -0.0697608, -0.105605, -0.0761839, 0.995402, 0.05806, 0.101069, 0.0656387, -0.992716, -85.3485, -1.42008, -11.5191)
+size = Vector3(30.6303, 5.04871, 30.5023)
+texture_albedo = ExtResource("16_qhhy6")
+texture_normal = ExtResource("17_xb7ri")
+texture_orm = ExtResource("18_kx44x")
+
+[node name="TrashZoneCore" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.6662, -0.587468, 7.42707)
+
+[node name="TrashZoneCore2" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0712, -0.587468, 21.9037)
+
+[node name="TrashZoneCore3" parent="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler" instance=ExtResource("20_5eqnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.2344, -0.587468, 7.90501)
+
+[node name="Audio" type="Node3D" parent="Area3CorruptedZones/TutorialCorrupted6"]
+
+[node name="Music" type="Node3D" parent="Area3CorruptedZones/TutorialCorrupted6/Audio"]
+
+[node name="Corruption Music" type="AudioStreamPlayer3D" parent="Area3CorruptedZones/TutorialCorrupted6/Audio/Music"]
+transform = Transform3D(0.592062, 0.054156, 0.804071, -0.0381491, 0.998504, -0.0391612, -0.804989, -0.00748877, 0.593242, -325.037, -127.665, -229.308)
+stream = ExtResource("29_pw61q")
+unit_size = 23.34
+max_db = -3.0
+autoplay = true
+max_distance = 220.42
+bus = &"Music"
+
+[node name="CAVE MUSIC" type="AudioStreamPlayer3D" parent="Area3CorruptedZones/TutorialCorrupted6/Audio/Music"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 348.22, -11.7737, 62.0763)
+stream = ExtResource("30_l4em3")
+volume_db = -5.0
+unit_size = 12.85
+max_db = -3.0
+autoplay = true
+bus = &"Music"
+
 [editable path="CorruptedZones/TutorialCorrupted/TrashZoneHandler"]
 [editable path="CorruptedZones/TutorialCorrupted2/TrashZoneHandler"]
 [editable path="CorruptedZones/IslandCorrupted/TrashZoneHandler"]
 [editable path="CorruptedZones/IslandCorupted2/TrashZoneHandler"]
 [editable path="CorruptedZones/IslandCorupted3/TrashZoneHandler"]
+[editable path="Area2CorruptedZones/TutorialCorrupted/TrashZoneHandler"]
+[editable path="Area2CorruptedZones/TutorialCorrupted2/TrashZoneHandler"]
+[editable path="Area2CorruptedZones/TutorialCorrupted3/TrashZoneHandler"]
+[editable path="Area2CorruptedZones/TutorialCorrupted4/TrashZoneHandler"]
+[editable path="Area2CorruptedZones/TutorialCorrupted5/TrashZoneHandler"]
+[editable path="Area3CorruptedZones/TutorialCorrupted6/TrashZoneHandler"]

@@ -2,12 +2,12 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://dyaw3am5n1ioe"
+uid="uid://dkjyrwunnmian"
 valid=false
 
 [deps]
 
-source_file="res://ogg file from vlc.ogg"
+source_file="res://TGC_MOUNTAIN_MUSIC.ogg"
 
 [params]
 

@@ -2,17 +2,16 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://c5ko3vowrdjfi"
-path="res://.godot/imported/TGC_The_ Source.ogg-d1a83d067609a9d2b3947b89871e920b.oggvorbisstr"
+uid="uid://cdc882gvu08wb"
+valid=false
 
 [deps]
 
 source_file="res://TGC_The_ Source.ogg"
-dest_files=["res://.godot/imported/TGC_The_ Source.ogg-d1a83d067609a9d2b3947b89871e920b.oggvorbisstr"]
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0
